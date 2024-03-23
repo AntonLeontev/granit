@@ -87,7 +87,7 @@ onMounted(() => {
                                         }"
                                     >
                                         <Link
-                                            :href="route('military')"
+                                            :href="route('catalog.military')"
                                             class="menu__link"
                                         >
                                             <img

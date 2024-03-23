@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MilitaryProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,9 @@ Route::inertia('/civil', 'Civil')->name('civil');
 Route::inertia('/contacts', 'Contacts')->name('contacts');
 
 Route::inertia('/civil/catalog', 'CatalogCivil')->name('catalog.civil');
-Route::inertia('military/catalog', 'CatalogMilitary')->name('catalog.military');
+Route::get('military/catalog', [MilitaryProductController::class, 'index'])->name('catalog.military');
 
 Route::inertia('military/catalog/product', 'Product')->name('catalog.product');
+
+Route::get('military/catalog/products/{product}', [MilitaryProductController::class, 'show'])
+    ->name('military.product.show');

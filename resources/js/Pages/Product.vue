@@ -9,6 +9,12 @@ export default {
 <script setup>
 import { Link } from "@inertiajs/vue3";
 import { ref } from "vue";
+import Model from "/resources/js/Components/Model.vue"
+
+defineProps({ 
+	product: Object,
+	loc: String
+})
 
 const activeTab = ref("description");
 </script>
@@ -18,10 +24,12 @@ const activeTab = ref("description");
         <div class="product" style="background-image: url(/img/catalog-bg.png)">
             <div class="product__inner">
                 <div class="product__model">
-                    <div class="product__img -ibg">
-                        <img src="/img/univer.jpg" alt="Image" />
+                    <div class="product__img -ibg" v-if="product['3d_model'] === null">
+                        <img :src="'/storage/' + product.image" alt="Image" />
                     </div>
-                    <div class="control-panel">
+
+					<Model :path="product['3d_model']" />
+                    <!-- <div class="control-panel" >
                         <button
                             type="button"
                             class="control-panel__item _reverse"
@@ -46,7 +54,7 @@ const activeTab = ref("description");
                         <button type="button" class="control-panel__item">
                             <img src="/img/icons/repeat.svg" alt="Image" />
                         </button>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="product__parameters">
                     <div class="tabs" data-tabs="">
@@ -56,28 +64,25 @@ const activeTab = ref("description");
                                 v-if="activeTab === 'description'"
                             >
                                 <div class="product__title">
-                                    Береговая стационарная РЛС контроля
-                                    надводной обстановки «ИРТЫШ-3С»
+                                    {{ product['title_' + loc] }}
                                 </div>
-                                <div class="product__content">description</div>
+                                <div class="product__content" v-html="product['description_' + loc]"></div>
                             </div>
                             <div
                                 class="tabs__body"
                                 v-if="activeTab === 'table'"
                             >
                                 <div class="product__title">
-                                    Береговая стационарная РЛС контроля
-                                    надводной обстановки «ИРТЫШ-3С»
+                                    {{ product['title_' + loc] }}
                                 </div>
-                                <div class="product__content">table</div>
+                                <div class="product__content" v-html="product['characteristics_' + loc]"></div>
                             </div>
                             <div
                                 class="tabs__body"
                                 v-if="activeTab === 'video'"
                             >
                                 <div class="product__title">
-                                    Береговая стационарная РЛС контроля
-                                    надводной обстановки «ИРТЫШ-3С»
+                                    {{ product['title_' + loc] }}
                                 </div>
                                 <div class="product__content">
                                     video
@@ -163,6 +168,7 @@ const activeTab = ref("description");
                                 <button
                                     type="button"
                                     class="tabs__title"
+									v-if="product.videos_count > 0"
                                     :class="{
                                         '_tab-active': activeTab === 'video',
                                     }"
