@@ -85,43 +85,23 @@ const activeTab = ref("description");
                                     {{ product['title_' + loc] }}
                                 </div>
                                 <div class="product__content">
-                                    video
-                                    <!-- <ol class="video-list">
-                                        <li>
+                                    <ol class="video-list">
+                                        <li v-for="video in product.videos">
                                             <div class="video-list__title">
-                                                Сотрудничество с ВУЗами
+                                                {{ video['title_'+loc] }}
                                             </div>
-                                            <video class="video" controls>
-                                                <source
+                                            <video class="video" :src="'/storage/'+video.path" controls>
+                                                <!-- <source
                                                     src="video.webm"
                                                     type="video/webm"
                                                 />
                                                 <source
                                                     src="video.mp4"
                                                     type="video/mp4"
-                                                />
-                                                Ваш браузер не поддерживает
-                                                встроенные видео :(
+                                                /> -->
                                             </video>
                                         </li>
-                                        <li>
-                                            <div class="video-list__title">
-                                                Сотрудничество с ВУЗами
-                                            </div>
-                                            <video class="video" controls>
-                                                <source
-                                                    src="video.webm"
-                                                    type="video/webm"
-                                                />
-                                                <source
-                                                    src="video.mp4"
-                                                    type="video/mp4"
-                                                />
-                                                Ваш браузер не поддерживает
-                                                встроенные видео :(
-                                            </video>
-                                        </li>
-                                    </ol> -->
+                                    </ol>
                                 </div>
                             </div>
                         </div>

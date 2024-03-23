@@ -6,17 +6,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Video extends Model
+class MilitaryVideo extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'product_id',
+        'military_product_id',
         'path',
+        'title_ru',
+        'title_en',
     ];
 
     public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(MilitaryProduct::class);
     }
 }

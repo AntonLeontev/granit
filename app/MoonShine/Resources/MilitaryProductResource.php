@@ -14,7 +14,7 @@ use MoonShine\Fields\File;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
-use MoonShine\Fields\Relationships\MorphMany;
+use MoonShine\Fields\Relationships\HasMany;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
@@ -26,11 +26,11 @@ class MilitaryProductResource extends ModelResource
 {
     protected string $model = MilitaryProduct::class;
 
-    protected string $title = 'Продукция';
+    protected string $title = 'Военная продукция';
 
     protected array $with = ['videos'];
 
-    protected string $column = 'title';
+    protected string $column = 'title_ru';
 
     public function fields(): array
     {
@@ -58,9 +58,13 @@ class MilitaryProductResource extends ModelResource
                 ->dir('military/images'),
             File::make('3D модель', '3d_model')
                 ->removable()
-                ->dir('military/models'),
+                ->keepOriginalFileName()
+                ->dir('military/models')
+                ->hint('Модели должны быть с расширением glb или gltf'),
 
-            MorphMany::make('Видео', 'videos'),
+            HasMany::make('Видео', 'videos', resource: new MilitaryVideoResource)
+                ->hideOnIndex()
+                ->creatable(),
         ];
     }
 
@@ -83,8 +87,27 @@ class MilitaryProductResource extends ModelResource
         ];
     }
 
-    public function pageComponents(): array
+    public function search(): array
     {
         return [];
     }
+
+    // protected function resolveOrder(): static
+    // {
+    //     if (($sort = request('sort')) && is_string($sort)) {
+    //         $column = ltrim($sort, '-');
+    //         $direction = str_starts_with($sort, '-') ? 'desc' : 'asc';
+
+    //         if ($column === 'author') {
+    //             $this->query()
+    //                 ->select('posts.*')
+    //                 ->leftJoin('users', 'users.id', '=', 'posts.author_id')
+    //                 ->orderBy('users.name', $direction);
+
+    //             return $this;
+    //         }
+    //     }
+
+    //     return parent::resolveOrder();
+    // }
 }

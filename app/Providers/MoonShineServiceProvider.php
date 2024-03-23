@@ -6,6 +6,7 @@ namespace App\Providers;
 
 use App\MoonShine\Resources\CivilProductResource;
 use App\MoonShine\Resources\MilitaryProductResource;
+use App\MoonShine\Resources\MilitaryVideoResource;
 use MoonShine\Menu\MenuGroup;
 use MoonShine\Menu\MenuItem;
 use MoonShine\MoonShine;
@@ -15,9 +16,16 @@ use MoonShine\Resources\MoonShineUserRoleResource;
 
 class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
 {
+    public function register(): void
+    {
+        moonshine()->home(MilitaryProductResource::class);
+    }
+
     protected function resources(): array
     {
-        return [];
+        return [
+            new MilitaryVideoResource,
+        ];
     }
 
     protected function pages(): array

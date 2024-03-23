@@ -633,7 +633,7 @@ body {
 }
 
 .product__content {
-  height: 38.75rem;
+  height: 48.75rem;
   overflow: hidden auto;
   scrollbar-width: thin;
   scrollbar-color: #224042 #006D78;
@@ -645,6 +645,7 @@ body {
 }
 
 .product__img {
+	height: 100%;
   padding-bottom: 100%;
 }
 
@@ -698,7 +699,8 @@ body::-webkit-scrollbar-thumb {
 .video {
   border-radius: 0.3125rem;
   width: 39.375rem;
-  height: 15.375rem;
+  /* height: 15.375rem; */
+  height: auto;
   margin-left: -1.875rem;
 }
 

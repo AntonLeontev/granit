@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use MoonShine\Fields\Relationships\MorphMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class CivilProduct extends Model
 {
@@ -22,8 +22,11 @@ class CivilProduct extends Model
         '3d_model',
     ];
 
+    protected $casts = [
+    ];
+
     public function videos(): MorphMany
     {
-        return $this->morphMany(Video::class, 'videoable');
+        return $this->morphMany(MilitaryVideo::class, 'videoable');
     }
 }
