@@ -26,3 +26,13 @@ Route::inertia('military/catalog/product', 'Product')->name('catalog.product');
 
 Route::get('military/catalog/products/{product}', [MilitaryProductController::class, 'show'])
     ->name('military.product.show');
+
+Route::get('lang', function () {
+    if (session()->get('lang', 'en') === 'ru') {
+        session()->put('lang', 'en');
+    } else {
+        session()->put('lang', 'ru');
+    }
+
+    return back();
+})->name('lang');

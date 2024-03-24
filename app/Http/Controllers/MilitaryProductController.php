@@ -12,7 +12,6 @@ class MilitaryProductController extends Controller
 
         return inertia('Catalog', [
             'products' => $products,
-            'loc' => app()->getLocale(),
         ]);
     }
 
@@ -23,7 +22,6 @@ class MilitaryProductController extends Controller
 
         return inertia('Product', [
             'product' => $product,
-            'loc' => app()->getLocale(),
         ]);
     }
 }

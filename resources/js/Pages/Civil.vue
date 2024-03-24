@@ -15,25 +15,17 @@ import { Link } from "@inertiajs/vue3";
         <section class="hero" style="background-image: url(/img/civil-bg.jpg)">
             <div class="hero__content">
                 <h2 class="hero__title">
-                    Продукция <br />
-                    Гражданского назначения
+                    {{ __('pages.civil.title') }}
                 </h2>
                 <div class="hero__text">
-                    На протяжении многих лет предприятие создает принципиально
-                    новые виды военной техники и вооружений. Военно-Морскому
-                    Флоту переданы десятки уникальных комплексов, которыми
-                    оснащены корабли практически всех классов, в том числе
-                    тяжелый крейсер «Петр Великий», авианесущий корабль «Адмирал
-                    Кузнецов», противолодочные корабли типа «Адмирал Чабаненко»,
-                    атомные подводные лодки типа «Акула», «Антей», «Борей»,
-                    «Ясень», а также объекты берегового базирования.
+                    {{ __('pages.civil.text') }}
                 </div>
                 <div class="hero__actions">
                     <Link :href="route('catalog.civil')" class="button"
-                        >Каталог продукции</Link
+                        >{{ __('pages.civil.1') }}</Link
                     >
                     <Link :href="route('home')" class="button button_outline"
-                        >На главную</Link
+                        >{{ __('pages.civil.2') }}</Link
                     >
                 </div>
             </div>

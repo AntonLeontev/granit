@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e9828f36e030f064cfffd6d9c2f6c4e",
+    "content-hash": "62f3dbfce845438ff9496883431053ef",
     "packages": [
         {
             "name": "brick/math",
@@ -129,6 +129,58 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
+        },
+        {
+            "name": "cyberwolfstudio/lingua",
+            "version": "v0.9.61",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cyberwolf-studio/lingua.git",
+                "reference": "5c812e8cec8e63e9f266fec133a6ba9927215629"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cyberwolf-studio/lingua/zipball/5c812e8cec8e63e9f266fec133a6ba9927215629",
+                "reference": "5c812e8cec8e63e9f266fec133a6ba9927215629",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^9.0|^10.0|^11.0",
+                "php": "^8.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CyberWolfStudio\\Lingua\\LinguaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CyberWolfStudio\\Lingua\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "secondman",
+                    "email": "secondman@jetstreamlabs.com"
+                },
+                {
+                    "name": "cyberwolfstudio",
+                    "email": "hello@cyberwolfstudio.com"
+                }
+            ],
+            "description": "Add your Laravel language translations to your asset pipeline for use in Javascript packages like Vue or React.",
+            "support": {
+                "issues": "https://github.com/cyberwolf-studio/lingua/issues",
+                "source": "https://github.com/cyberwolf-studio/lingua/tree/v0.9.61"
+            },
+            "time": "2024-03-17T11:25:33+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

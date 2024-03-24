@@ -16,7 +16,7 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
                                     АО «Концерн <br />
@@ -32,7 +32,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         191014, Россия, Санкт-Петербург, ул.
@@ -48,7 +48,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 812 271-74-94</p>
@@ -63,7 +63,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         office@granit-electron.ru
@@ -77,7 +77,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Корпоративный сайт:
+                                        {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         https://www.granit-electron.ru/
@@ -145,10 +145,10 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
-                                    АО «Завод имени А. А. Кулакова»
+                                    АО «Завод имени А.&nbsp;А.&nbsp;Кулакова»
                                 </div>
                             </div>
                             <div class="contacts-content__info">
@@ -160,11 +160,10 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
-                                        Россия, 197198, Санкт-Петербург, ул.
-                                        Яблочкова, д.12
+                                        Россия, 197198, Санкт-Петербург, ул.&nbsp;Яблочкова, д.&nbsp;12
                                     </div>
                                 </div>
                                 <div class="info-contact">
@@ -175,7 +174,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 812 233-29-02</p>
@@ -190,7 +189,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         office@zavodkulakova.ru
@@ -204,7 +203,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Корпоративный сайт:
+                                        {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         https://www.granit-srz.ru/
@@ -272,7 +271,7 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
                                     АО «РАВЕНСТВО-СЕРВИС»
@@ -287,11 +286,11 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         Россия, 198099, Санкт-Петербург, <br />
-                                        ул. Промышленная, д. 19
+                                        ул. Промышленная, д.&nbsp;19
                                     </div>
                                 </div>
                                 <div class="info-contact">
@@ -302,7 +301,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 812 252-92-00</p>
@@ -317,7 +316,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         rs@rawenstvo.ru
@@ -331,7 +330,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Корпоративный сайт:
+                                        {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         www.zavodkulakova.ru
@@ -399,7 +398,7 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
                                     АО «РАВЕНСТВО-СЕРВИС»
@@ -414,11 +413,11 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         Россия, 198099, Санкт-Петербург, <br />
-                                        ул. Промышленная, д. 19
+                                        ул. Промышленная, д.&nbsp;19
                                     </div>
                                 </div>
                                 <div class="info-contact">
@@ -429,7 +428,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 812 252-92-00</p>
@@ -444,7 +443,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         rs@rawenstvo.ru
@@ -454,7 +453,7 @@ import { Link } from "@inertiajs/vue3";
                                 <!--                                    <div class="info-contact__label">-->
                                 <!--                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"-->
                                 <!--                                             class="info-contact__icon">-->
-                                <!--                                        Корпоративный сайт:-->
+                                <!--                                        {{ __('pages.contacts.site') }}:-->
                                 <!--                                    </div>-->
                                 <!--                                    <div class="info-contact__value">-->
                                 <!--                                        https://www.rawenstvo.ru/-->
@@ -522,7 +521,7 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
                                     АО «РАВЕНСТВО»
@@ -537,11 +536,11 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         Россия, 198099, Санкт-Петербург,
-                                        <br />ул. Промышленная, д. 19
+                                        ул.&nbsp;Промышленная, д.&nbsp;19
                                     </div>
                                 </div>
                                 <div class="info-contact">
@@ -552,7 +551,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 812 252-93-10</p>
@@ -567,7 +566,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         rawenstvo@rawenstvo.ru
@@ -581,7 +580,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Корпоративный сайт:
+                                        {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         https://www.rawenstvo.ru/
@@ -649,7 +648,7 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
                                     АО «Петровский электромеханический завод
@@ -665,12 +664,12 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         Россия, 412541, Саратовская область,
-                                        <br />
-                                        г. Петровск, ул. Гоголя, д. 40
+                                        <br/>
+                                        г.&nbsp;Петровск, ул.&nbsp;Гоголя, д.&nbsp;40
                                     </div>
                                 </div>
                                 <div class="info-contact">
@@ -681,7 +680,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 84555 31-501</p>
@@ -696,7 +695,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         ao@pemzmolot.ru
@@ -706,7 +705,7 @@ import { Link } from "@inertiajs/vue3";
                                 <!--                                    <div class="info-contact__label">-->
                                 <!--                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"-->
                                 <!--                                             class="info-contact__icon">-->
-                                <!--                                        Корпоративный сайт:-->
+                                <!--                                        {{ __('pages.contacts.site') }}:-->
                                 <!--                                    </div>-->
                                 <!--                                    <div class="info-contact__value">-->
                                 <!--                                        https://www.granit-electron.ru/-->
@@ -774,7 +773,7 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    Контакты
+                                    {{ __('pages.contacts.h1') }}
                                 </div>
                                 <div class="contacts-content__label">
                                     АО «СЕВЕРНЫЙ ПРЕСС»
@@ -789,7 +788,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Адрес:
+                                        {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         Россия, 195196, Санкт-Петербург,
@@ -804,7 +803,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Телефон:
+                                        {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         <p>+7 812 445-21-36</p>
@@ -819,7 +818,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Электронный адрес:
+                                        {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         post@nordpress.spb.su
@@ -833,7 +832,7 @@ import { Link } from "@inertiajs/vue3";
                                             alt="Image"
                                             class="info-contact__icon"
                                         />
-                                        Корпоративный сайт:
+                                        {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         www.nordpress.spb.su

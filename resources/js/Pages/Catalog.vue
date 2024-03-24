@@ -1,5 +1,8 @@
 <script>
 import Layout from "/resources/js/Layouts/AppLayout.vue";
+import { usePage } from '@inertiajs/vue3'
+
+const page = usePage()
 
 export default {
     layout: Layout,
@@ -14,17 +17,17 @@ defineProps({
 		type: Array,
 		default: [],
 	},
-	loc: String
 })
 
-const routeName = location.pathname.startsWith('/military/') ? 'military.product.show' : 'civil.product.show';
+const appointment = location.pathname.startsWith('/military/') ? 'military' : 'civil';
+const routeName = appointment + '.product.show';
 </script>
 
 <template>
     <Layout>
         <div class="catalog" style="background-image: url(/img/catalog-bg.png)">
             <div class="catalog__header">
-                <div class="catalog__title">военная продукция</div>
+                <div class="catalog__title">{{ __(`pages.${appointment}_catalog.h1`) }}</div>
             </div>
             <div class="catalog__body">
                 <div class="catalog__items">
@@ -39,16 +42,16 @@ const routeName = location.pathname.startsWith('/military/') ? 'military.product
                                 alt="Image"
                             />
                         </div>
-                        <div class="catalog-item__title">{{ product['title_'+loc] }}</div>
+                        <div class="catalog-item__title">{{ product['title_'+page.props.locale] }}</div>
                     </div>
                 </div>
             </div>
             <div class="catalog__footer">
                 <div class="catalog-item__text">
-                    <strong>АО “Концерн “Гранит-Электрон”</strong>
+                    <strong>{{ __(`pages.${appointment}_catalog.footer1`) }}</strong>
                 </div>
                 <div class="catalog-item__text">
-                    Опыт. Профессионализм. История.
+                    {{ __(`pages.${appointment}_catalog.footer2`) }}
                 </div>
             </div>
         </div>

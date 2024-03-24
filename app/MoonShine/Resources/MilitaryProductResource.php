@@ -44,13 +44,23 @@ class MilitaryProductResource extends ModelResource
             Grid::make([
                 Column::make('Данные на русском', [
                     Text::make('Название RU', 'title_ru'),
-                    TinyMce::make('Описание RU', 'description_ru')->nullable()->hideOnIndex(),
-                    TinyMce::make('Характеристики RU', 'characteristics_ru')->nullable()->hideOnIndex(),
+                    TinyMce::make('Описание RU', 'description_ru')->nullable()->hideOnIndex()
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->menubar(''),
+                    TinyMce::make('Характеристики RU', 'characteristics_ru')->nullable()->hideOnIndex()
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->menubar(''),
                 ])->columnSpan(6),
                 Column::make('Данные на английском', [
                     Text::make('Название EN', 'title_en'),
-                    TinyMce::make('Описание EN', 'description_en')->nullable()->hideOnIndex(),
-                    TinyMce::make('Характеристики EN', 'characteristics_en')->nullable()->hideOnIndex(),
+                    TinyMce::make('Описание EN', 'description_en')
+                        ->nullable()
+                        ->hideOnIndex()
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->menubar(''),
+                    TinyMce::make('Характеристики EN', 'characteristics_en')->nullable()->hideOnIndex()
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->menubar(''),
                 ])->columnSpan(6),
             ]),
 

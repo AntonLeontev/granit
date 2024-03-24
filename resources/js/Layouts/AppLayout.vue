@@ -1,33 +1,34 @@
 <script setup>
 import { Link } from "@inertiajs/vue3";
-import { ref, onMounted, onBeforeUpdate } from "vue";
-let contentTrigger = ref(false);
+import { usePage } from '@inertiajs/vue3'
+import { router } from '@inertiajs/vue3'
 
-onMounted(() => {
-    contentTrigger = true;
-});
+const page = usePage()
 
-// onBeforeUpdate(() => {
-//     contentTrigger = false;
+function changeLang() {
+	if (page.props.locale === 'ru') {
+		page.props.locale = 'en'
+	} else {
+		page.props.locale = 'ru'
+	}
 
-//     // Wait for the DOM to re-render and then show the new content after the "leave" transition is over.
-//     $nextTick(() => {
-//         setTimeout(() => {
-//             contentTrigger = true;
-//         }, 800);
-//     });
-// });
+	router.get(route('lang'), {}, {
+		preserveState: true,
+  		preserveScroll: true,
+	})
+}
+
 </script>
 
 <template>
     <!DOCTYPE html>
     <html lang="ru">
         <head>
-            <title>Главная</title>
+            <title>Гранит-Электрон</title>
             <meta charset="UTF-8" />
             <meta name="format-detection" content="telephone=no" />
             <!-- <style>body{opacity: 0;}</style> -->
-            <link rel="shortcut icon" href="favicon.ico" />
+            <link rel="shortcut icon" href="/favicon.ico" />
             <!-- <meta name="robots" content="noindex, nofollow"> -->
             <meta
                 name="viewport"
@@ -118,9 +119,16 @@ onMounted(() => {
                                 </ul>
                                 <ul class="menu__list">
                                     <li class="menu__item">
-                                        <a href="#" class="menu__link _lang"
-                                            >RU</a
-                                        >
+                                        <a :href="route('lang')" class="menu__link _lang" 
+											v-if="page.props.locale === 'ru'"
+											@click.prevent="changeLang"
+										>en</a>
+                                        <a :href="route('lang')" class="menu__link _lang" 
+											v-if="page.props.locale === 'en'"
+											@click.prevent="changeLang"
+										>
+											ru
+										</a>
                                     </li>
                                 </ul>
                             </nav>

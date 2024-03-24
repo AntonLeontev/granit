@@ -1,10 +1,10 @@
 .product__content p {
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 .product__content ul {
-	margin-left: 30px;
-	margin-bottom: 15px;
+	margin-left: 50px;
+	margin-bottom: 25px;
 }
 
 .product__content ul li {
@@ -13,4 +13,35 @@
 
 .product__content ul li+li {
 	margin-top: 10px;
+}
+
+.product__content ol {
+	margin-left: 50px;
+	margin-bottom: 25px;
+}
+
+.product__content ol li {
+	list-style-type: style type;
+}
+
+.product__content ol li+li {
+	margin-top: 10px;
+}
+
+.product__content table {
+	margin-bottom: 25px;
+}
+
+.product__content tr {
+	border-bottom: 2px #fff solid;
+}
+
+.product__content td {
+	padding-bottom: 10px;
+	padding-top: 16px;
+}
+
+.product__content table ul {
+	margin-left: 25px;
+	margin-bottom: 0;
 }

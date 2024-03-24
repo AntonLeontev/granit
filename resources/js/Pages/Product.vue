@@ -10,6 +10,9 @@ export default {
 import { Link } from "@inertiajs/vue3";
 import { ref } from "vue";
 import Model from "/resources/js/Components/Model.vue"
+import { usePage } from '@inertiajs/vue3'
+
+const page = usePage()
 
 defineProps({ 
 	product: Object,
@@ -64,31 +67,31 @@ const activeTab = ref("description");
                                 v-if="activeTab === 'description'"
                             >
                                 <div class="product__title">
-                                    {{ product['title_' + loc] }}
+                                    {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div class="product__content" v-html="product['description_' + loc]"></div>
+                                <div class="product__content" v-html="product['description_' + page.props.locale]"></div>
                             </div>
                             <div
                                 class="tabs__body"
                                 v-if="activeTab === 'table'"
                             >
                                 <div class="product__title">
-                                    {{ product['title_' + loc] }}
+                                    {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div class="product__content" v-html="product['characteristics_' + loc]"></div>
+                                <div class="product__content" v-html="product['characteristics_' + page.props.locale]"></div>
                             </div>
                             <div
                                 class="tabs__body"
                                 v-if="activeTab === 'video'"
                             >
                                 <div class="product__title">
-                                    {{ product['title_' + loc] }}
+                                    {{ product['title_' + page.props.locale] }}
                                 </div>
                                 <div class="product__content">
                                     <ol class="video-list">
                                         <li v-for="video in product.videos">
                                             <div class="video-list__title">
-                                                {{ video['title_'+loc] }}
+                                                {{ video['title_'+page.props.locale] }}
                                             </div>
                                             <video class="video" :src="'/storage/'+video.path" controls>
                                                 <!-- <source
