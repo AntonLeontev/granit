@@ -7,7 +7,6 @@ namespace App\MoonShine\Resources;
 use App\Models\MilitaryProduct;
 use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Validation\Rule;
 use MoonShine\Decorations\Column;
 use MoonShine\Decorations\Grid;
 use MoonShine\Fields\File;
@@ -32,14 +31,21 @@ class MilitaryProductResource extends ModelResource
 
     protected string $column = 'title_ru';
 
+    protected string $sortColumn = 'position'; // Поле сортировки по умолчанию
+
+    protected string $sortDirection = 'ASC'; // Тип сортировки по умолчанию
+
     public function fields(): array
     {
         return [
             ID::make()->sortable()->hideOnIndex()->hideOnDetail(),
-            Number::make('Позиция в списке', 'position')
-                ->default((MilitaryProduct::max('position') ?? 0) + 1)
-                ->hideOnDetail()
-                ->hideOnIndex(),
+
+            Number::make('#', 'position')
+                ->hideOnForm()
+                ->hideOnDetail(),
+            Number::make('Позиция в каталоге', 'position')
+                ->hideOnIndex()
+                ->default((MilitaryProduct::max('position') ?? 0) + 1),
 
             Grid::make([
                 Column::make('Данные на русском', [
@@ -91,7 +97,6 @@ class MilitaryProductResource extends ModelResource
             'image' => [
                 'nullable',
                 'image',
-                // Rule::dimensions()->minWidth(760)->minHeight(900),
             ],
             '3d_model' => ['nullable', 'file'],
         ];
@@ -101,23 +106,4 @@ class MilitaryProductResource extends ModelResource
     {
         return [];
     }
-
-    // protected function resolveOrder(): static
-    // {
-    //     if (($sort = request('sort')) && is_string($sort)) {
-    //         $column = ltrim($sort, '-');
-    //         $direction = str_starts_with($sort, '-') ? 'desc' : 'asc';
-
-    //         if ($column === 'author') {
-    //             $this->query()
-    //                 ->select('posts.*')
-    //                 ->leftJoin('users', 'users.id', '=', 'posts.author_id')
-    //                 ->orderBy('users.name', $direction);
-
-    //             return $this;
-    //         }
-    //     }
-
-    //     return parent::resolveOrder();
-    // }
 }

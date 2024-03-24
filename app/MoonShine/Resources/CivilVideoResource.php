@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use App\Models\MilitaryVideo;
+use App\Models\CivilVideo;
 use Illuminate\Database\Eloquent\Model;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\File;
@@ -15,13 +15,13 @@ use MoonShine\Resources\ModelResource;
 use MoonShine\Traits\Resource\ResourceWithParent;
 
 /**
- * @extends ModelResource<MilitaryVideo>
+ * @extends ModelResource<CivilVideo>
  */
-class MilitaryVideoResource extends ModelResource
+class CivilVideoResource extends ModelResource
 {
     use ResourceWithParent;
 
-    protected string $model = MilitaryVideo::class;
+    protected string $model = CivilVideo::class;
 
     protected string $title = 'Видео';
 
@@ -36,10 +36,10 @@ class MilitaryVideoResource extends ModelResource
                     ->nullable(),
                 File::make('Видео', 'path')
                     ->removable()
-                    ->dir('military/video')
+                    ->dir('civil/video')
                     ->allowedExtensions(['mp4'])
                     ->keepOriginalFileName(),
-                Hidden::make('military_product_id', 'military_product_id')
+                Hidden::make('civil_product_id', 'civil_product_id')
                     ->default($this->getParentId())
                     ->hideOnIndex(),
             ]),
@@ -52,7 +52,7 @@ class MilitaryVideoResource extends ModelResource
             'title_ru' => ['nullable', 'string', 'max:255'],
             'title_en' => ['nullable', 'string', 'max:255'],
             'path' => ['required', 'file', 'mimetypes:video/mp4'],
-            'military_product_id' => ['required', 'exists:military_products,id'],
+            'civil_product_id' => ['required', 'exists:civil_products,id'],
         ];
     }
 
@@ -68,7 +68,7 @@ class MilitaryVideoResource extends ModelResource
 
     protected function getParentResourceClassName(): string
     {
-        return MilitaryProductResource::class;
+        return CivilProductResource::class;
     }
 
     protected function getParentRelationName(): string

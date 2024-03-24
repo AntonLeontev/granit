@@ -8,7 +8,8 @@ class MilitaryProductController extends Controller
 {
     public function index()
     {
-        $products = MilitaryProduct::get(['id', 'title_ru', 'title_en', 'image']);
+        $products = MilitaryProduct::orderBy('position')
+            ->get(['id', 'title_ru', 'title_en', 'image']);
 
         return inertia('Catalog', [
             'products' => $products,

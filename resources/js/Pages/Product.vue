@@ -7,10 +7,9 @@ export default {
 </script>
 
 <script setup>
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
 import { ref } from "vue";
 import Model from "/resources/js/Components/Model.vue"
-import { usePage } from '@inertiajs/vue3'
 
 const page = usePage()
 
@@ -19,7 +18,34 @@ defineProps({
 	loc: String
 })
 
+const appointment = location.pathname.startsWith('/military/') ? 'military' : 'civil';
+const routeName =  'catalog.' + appointment;
+
+
 const activeTab = ref("description");
+
+const description = ref(null)
+const table = ref(null)
+const video = ref(null)
+
+const tabs = {description, table, video}
+
+function scrollUp() {
+	let elem = tabs[activeTab.value].value
+
+	elem.scroll({
+		top: elem.scrollTop - 200,
+		behavior: "smooth",
+	});
+}
+function scrollDown() {
+	let elem = tabs[activeTab.value].value
+
+	elem.scroll({
+		top: elem.scrollTop + 200,
+		behavior: "smooth",
+	});
+}
 </script>
 
 <template>
@@ -69,7 +95,7 @@ const activeTab = ref("description");
                                 <div class="product__title">
                                     {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div class="product__content" v-html="product['description_' + page.props.locale]"></div>
+                                <div class="product__content" v-html="product['description_' + page.props.locale]" ref="description"></div>
                             </div>
                             <div
                                 class="tabs__body"
@@ -78,7 +104,7 @@ const activeTab = ref("description");
                                 <div class="product__title">
                                     {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div class="product__content" v-html="product['characteristics_' + page.props.locale]"></div>
+                                <div class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
                             </div>
                             <div
                                 class="tabs__body"
@@ -87,7 +113,7 @@ const activeTab = ref("description");
                                 <div class="product__title">
                                     {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div class="product__content">
+                                <div class="product__content" ref="video">
                                     <ol class="video-list">
                                         <li v-for="video in product.videos">
                                             <div class="video-list__title">
@@ -111,7 +137,7 @@ const activeTab = ref("description");
                         <div class="tabs-actions">
                             <div class="tabs-actions__header">
                                 <Link
-                                    :href="route('catalog.military')"
+                                    :href="route(routeName)"
                                     class="tabs__title"
                                 >
                                     <img
@@ -165,9 +191,9 @@ const activeTab = ref("description");
                             </nav>
                             <div class="tabs-actions__footer">
                                 <button
-                                    id="scroll-up-button"
                                     type="button"
                                     class="tabs__title"
+									@click="scrollUp"
                                 >
                                     <img
                                         src="/img/icons/arrow-two.svg"
@@ -175,9 +201,9 @@ const activeTab = ref("description");
                                     />
                                 </button>
                                 <button
-                                    id="scroll-down-button"
                                     type="button"
                                     class="tabs__title"
+									@click="scrollDown"
                                 >
                                     <img
                                         src="/img/icons/arrow-two.svg"

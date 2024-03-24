@@ -61,13 +61,13 @@ onMounted(() => {
 		renderer.render(scene, camera);
 	});
 
-	window.addEventListener("dblclick", () => {
-		if (!document.fullscreenElement) {
-			canvas.requestFullscreen();
-		} else {
-			document.exitFullscreen();
-		}
-	});
+	// window.addEventListener("dblclick", () => {
+	// 	if (!document.fullscreenElement) {
+	// 		canvas.requestFullscreen();
+	// 	} else {
+	// 		document.exitFullscreen();
+	// 	}
+	// });
 })
 
 

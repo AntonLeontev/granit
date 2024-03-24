@@ -18,7 +18,7 @@ const init = () => {
 
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
-    // controls.enableZoom = false;
+    controls.enableZoom = false;
     controls.autoRotate = true;
     controls.autoRotateSpeed = 4;
 

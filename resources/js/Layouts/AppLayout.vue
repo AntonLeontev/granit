@@ -22,7 +22,7 @@ function changeLang() {
 
 <template>
     <!DOCTYPE html>
-    <html lang="ru">
+    <html :lang="page.props.locale">
         <head>
             <title>Гранит-Электрон</title>
             <meta charset="UTF-8" />
@@ -68,7 +68,7 @@ function changeLang() {
                                         }"
                                     >
                                         <Link
-                                            :href="route('civil')"
+                                            :href="route('catalog.civil')"
                                             class="menu__link"
                                         >
                                             <img

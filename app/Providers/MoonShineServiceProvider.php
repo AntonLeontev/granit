@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\MoonShine\Resources\CivilProductResource;
+use App\MoonShine\Resources\CivilVideoResource;
 use App\MoonShine\Resources\MilitaryProductResource;
 use App\MoonShine\Resources\MilitaryVideoResource;
 use MoonShine\Menu\MenuGroup;
@@ -25,6 +26,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
     {
         return [
             new MilitaryVideoResource,
+            new CivilVideoResource,
         ];
     }
 

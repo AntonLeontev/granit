@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
+use App\Traits\HasPosition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class CivilProduct extends Model
 {
     use HasFactory;
+    use HasPosition;
 
     protected $fillable = [
         'position',
@@ -25,8 +27,19 @@ class CivilProduct extends Model
     protected $casts = [
     ];
 
-    public function videos(): MorphMany
+    public function videos(): HasMany
     {
-        return $this->morphMany(MilitaryVideo::class, 'videoable');
+        return $this->hasMany(CivilVideo::class);
+    }
+
+    protected static function booted(): void
+    {
+        static::created(function (Model $product) {
+            static::updatePosition($product);
+        });
+
+        static::updated(function (Model $product) {
+            static::updatePosition($product);
+        });
     }
 }
