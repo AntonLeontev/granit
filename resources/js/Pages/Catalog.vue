@@ -42,7 +42,7 @@ const routeName = appointment + '.product.show';
                                 alt="Image"
                             />
                         </div>
-                        <div class="catalog-item__title">{{ product['title_'+page.props.locale] }}</div>
+                        <div class="catalog-item__title">{{ product['short_title_'+page.props.locale] }}</div>
                     </div>
                 </div>
             </div>

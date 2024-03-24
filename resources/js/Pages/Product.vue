@@ -164,6 +164,7 @@ function scrollDown() {
                                 <button
                                     type="button"
                                     class="tabs__title"
+									v-if="product['characteristics_' + page.props.locale] != null && product['characteristics_' + page.props.locale] != ''"
                                     :class="{
                                         '_tab-active': activeTab === 'table',
                                     }"

@@ -16,6 +16,8 @@ class CivilProduct extends Model
         'position',
         'title_ru',
         'title_en',
+        'short_title_ru',
+        'short_title_en',
         'description_ru',
         'description_en',
         'characteristics_ru',

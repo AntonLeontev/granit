@@ -50,6 +50,7 @@ class MilitaryProductResource extends ModelResource
             Grid::make([
                 Column::make('Данные на русском', [
                     Text::make('Название RU', 'title_ru'),
+                    Text::make('Название сокращенно RU', 'short_title_ru'),
                     TinyMce::make('Описание RU', 'description_ru')->nullable()->hideOnIndex()
                         ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
                         ->menubar(''),
@@ -59,6 +60,7 @@ class MilitaryProductResource extends ModelResource
                 ])->columnSpan(6),
                 Column::make('Данные на английском', [
                     Text::make('Название EN', 'title_en'),
+                    Text::make('Название сокращенно EN', 'short_title_en'),
                     TinyMce::make('Описание EN', 'description_en')
                         ->nullable()
                         ->hideOnIndex()
@@ -90,6 +92,8 @@ class MilitaryProductResource extends ModelResource
             'position' => ['required', 'min:1', 'integer'],
             'title_ru' => ['required', 'string', 'max:300'],
             'title_en' => ['required', 'string', 'max:300'],
+            'short_title_ru' => ['required', 'string', 'max:300'],
+            'short_title_en' => ['required', 'string', 'max:300'],
             'description_ru' => ['nullable', 'string', 'max:5000'],
             'description_en' => ['nullable', 'string', 'max:5000'],
             'characteristics_ru' => ['nullable', 'string', 'max:5000'],
