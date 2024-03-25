@@ -29,7 +29,7 @@ Route::get('civil/catalog/products/{product}', [CivilProductController::class, '
     ->name('civil.product.show');
 
 Route::get('lang', function () {
-    if (session()->get('lang', 'en') === 'ru') {
+    if (session()->get('lang', 'ru') === 'ru') {
         session()->put('lang', 'en');
     } else {
         session()->put('lang', 'ru');

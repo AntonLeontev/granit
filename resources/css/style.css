@@ -433,7 +433,7 @@ body {
 }
 
 .main {
-  background: url("../img/main-bg.png") no-repeat center/cover;
+  background: url("../img/home-bg.jpg") no-repeat center/cover;
   padding: 0 6.25rem;
   position: relative;
   height: 100vh;
