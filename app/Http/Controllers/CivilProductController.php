@@ -9,7 +9,7 @@ class CivilProductController extends Controller
     public function index()
     {
         $products = CivilProduct::orderBy('position')
-            ->get(['id', 'short_title_ru', 'short_title_en', 'image']);
+            ->get(['id', 'short_title_ru', 'short_title_en', 'image', 'thumbnail']);
 
         return inertia('Catalog', [
             'products' => $products,

@@ -71,7 +71,9 @@ class CivilProductResource extends ModelResource
                 ])->columnSpan(6),
             ]),
 
-            Image::make('Изображение', 'image')
+            Image::make('Изображение в товаре', 'image')
+                ->dir('civil/images'),
+            Image::make('Изображение в каталоге', 'thumbnail')
                 ->dir('civil/images'),
             File::make('3D модель', '3d_model')
                 ->removable()
@@ -97,10 +99,8 @@ class CivilProductResource extends ModelResource
             'description_en' => ['nullable', 'string', 'max:5000'],
             'characteristics_ru' => ['nullable', 'string', 'max:5000'],
             'characteristics_en' => ['nullable', 'string', 'max:5000'],
-            'image' => [
-                'nullable',
-                'image',
-            ],
+            'image' => ['nullable', 'image'],
+            'thumbnail' => ['nullable', 'image'],
             '3d_model' => ['nullable', 'file'],
         ];
     }

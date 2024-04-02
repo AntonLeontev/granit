@@ -38,7 +38,7 @@ const routeName = appointment + '.product.show';
                         ></Link>
                         <div class="catalog-item__img -ibg">
                             <img
-                                :src="'/storage/' + product.image"
+                                :src="'/storage/' + product.thumbnail"
                                 alt="Image"
                             />
                         </div>
