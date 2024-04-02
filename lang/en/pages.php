@@ -7,25 +7,25 @@ return [
     ],
     'civil' => [
         'title' => 'Civil products',
-        'text' => 'For many years, the company has been creating fundamentally new types of military equipment and weapons. The Navy received dozens of unique complexes that are equipped on ships of almost all classes, including the heavy cruiser "Peter the Great", the aircraft carrier "Admiral Kuznetsov", anti-submarine ships of the "Admiral Chabanenko" type, nuclear submarines of the "Akula" type, "Antey”, “Borey”, “Jasen”, as well as coastal-based objects.',
+        'text' => 'Unique base technologies allow JSC «Concern «Granit-Electron» within integration with production enterprises develop civil and dual purpose products. This are ship, coastal and navigating radar systems for ships motion control, for environment monitoring, sea borders security, information systems for Arctic zone of Northern Sea Route.',
         '1' => 'Product Catalog',
         '2' => 'Home',
     ],
     'civil_catalog' => [
         'h1' => 'Civil products',
         'footer1' => 'JSC Concern Granit-Electron',
-        'footer2' => 'Experience. Professionality. History.',
+        'footer2' => 'Trust experience!',
     ],
     'military' => [
         'title' => 'Military products',
-        'text' => 'For many years, the company has been creating fundamentally new types of military equipment and weapons. The Navy received dozens of unique complexes that are equipped on ships of almost all classes, including the heavy cruiser "Peter the Great", the aircraft carrier "Admiral Kuznetsov", anti-submarine ships of the "Admiral Chabanenko" type, nuclear submarines of the "Akula" type, "Antey”, “Borey”, “Jasen”, as well as coastal-based objects.',
+        'text' => 'For more than a century JSC «Concern «Granit-Electron» develops and produces conceptually advanced warfare systems. Dozens of unique complexes have been commissioned to Naval Forces. Virtually all types of warships are equipped with warfare systems of JSC «Concern «Granit-Electron», most notably missile carrier «Petr Velikiy», aircraft carrier «Admiral Kuznetsov», large anti-submarine ship «Admiral Chabanenko», advanced frigates, corvettes, strategic ballistic missiles submarines such as «Akula», «Yasen», «Borey» as well as shore-based objects. All conventional submarines, operated in Russia, are equipped with automatic radar stations, developed by Concern.',
         '1' => 'Product Catalog',
         '2' => 'Home',
     ],
     'military_catalog' => [
         'h1' => 'Military products',
         'footer1' => 'JSC Concern Granit-Electron',
-        'footer2' => 'Experience. Professionality. History.',
+        'footer2' => 'Trust experience!',
     ],
     'contacts' => [
         'h1' => 'Contacts',

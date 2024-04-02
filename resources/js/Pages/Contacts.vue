@@ -36,8 +36,7 @@ import { Link } from "@inertiajs/vue3";
                                     </div>
                                     <div class="info-contact__value">
                                         191014, Россия, Санкт-Петербург, ул.
-                                        Госпитальная, д. 3(вход с Греческого
-                                        пр., д. 31)
+                                        Госпитальная, д. 3
                                     </div>
                                 </div>
                                 <div class="info-contact">
