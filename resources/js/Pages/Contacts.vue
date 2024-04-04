@@ -1,17 +1,15 @@
 <script setup>
-import AppLayout from "../Layouts/AppLayout.vue";
-import { Link } from "@inertiajs/vue3";
+    import AppLayout from "../Layouts/AppLayout.vue";
+    import {
+        Link
+    } from "@inertiajs/vue3";
 </script>
 
 <template>
     <AppLayout>
         <div class="product" style="background-image: url(/img/catalog-bg.png)">
             <div class="contacts-wrapper">
-                <div
-                    class="logo-contact _submenu-open"
-                    hidden="hidden"
-                    data-submenu="1"
-                >
+                <div class="logo-contact _submenu-open" hidden="hidden" data-submenu="1">
                     <div class="logo-contact__block">
                         <div class="contacts-content">
                             <div class="contacts-content__header">
@@ -26,12 +24,8 @@ import { Link } from "@inertiajs/vue3";
                             <div class="contacts-content__info">
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/map.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -41,12 +35,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/phone.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -56,12 +46,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/envelope.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -70,12 +56,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/browser.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -86,53 +68,23 @@ import { Link } from "@inertiajs/vue3";
                         </div>
                         <div class="contacts-wrapper__logo">
                             <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="1"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_main" data-parent="1"
+                                    type="button">
                                     <img src="/img/brands/01.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="2"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_01" data-parent="2" type="button">
                                     <img src="/img/brands/02.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="3"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_02" data-parent="3" type="button">
                                     <img src="/img/brands/03.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="4"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_3" data-parent="4" type="button">
                                     <img src="/img/brands/04.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="6"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_5" data-parent="6" type="button">
                                     <img src="/img/brands/06.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="7"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_6" data-parent="7" type="button">
                                     <img src="/img/brands/07.jpg" alt="Image" />
                                 </button>
                             </div>
@@ -153,12 +105,8 @@ import { Link } from "@inertiajs/vue3";
                             <div class="contacts-content__info">
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/map.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -167,12 +115,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/phone.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -182,12 +126,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/envelope.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -196,12 +136,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/browser.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -212,53 +148,28 @@ import { Link } from "@inertiajs/vue3";
                         </div>
                         <div class="contacts-wrapper__logo">
                             <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="2"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_main" data-parent="2"
+                                    type="button">
                                     <img src="/img/brands/02.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="1"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_01" data-parent="1"
+                                    type="button">
                                     <img src="/img/brands/01.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="3"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_02" data-parent="3"
+                                    type="button">
                                     <img src="/img/brands/03.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="4"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_3" data-parent="4"
+                                    type="button">
                                     <img src="/img/brands/04.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="6"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_5" data-parent="6"
+                                    type="button">
                                     <img src="/img/brands/06.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="7"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_6" data-parent="7"
+                                    type="button">
                                     <img src="/img/brands/07.jpg" alt="Image" />
                                 </button>
                             </div>
@@ -279,12 +190,8 @@ import { Link } from "@inertiajs/vue3";
                             <div class="contacts-content__info">
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/map.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -294,12 +201,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/phone.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -309,12 +212,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/envelope.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -323,12 +222,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/browser.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -339,53 +234,28 @@ import { Link } from "@inertiajs/vue3";
                         </div>
                         <div class="contacts-wrapper__logo">
                             <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="3"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_main" data-parent="3"
+                                    type="button">
                                     <img src="/img/brands/03.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="2"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_01" data-parent="2"
+                                    type="button">
                                     <img src="/img/brands/02.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="1"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_02" data-parent="1"
+                                    type="button">
                                     <img src="/img/brands/01.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="4"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_3" data-parent="4"
+                                    type="button">
                                     <img src="/img/brands/04.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="6"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_5" data-parent="6"
+                                    type="button">
                                     <img src="/img/brands/06.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="7"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_6" data-parent="7"
+                                    type="button">
                                     <img src="/img/brands/07.jpg" alt="Image" />
                                 </button>
                             </div>
@@ -397,251 +267,87 @@ import { Link } from "@inertiajs/vue3";
                         <div class="contacts-content">
                             <div class="contacts-content__header">
                                 <div class="contacts-content__title">
-                                    {{ __('pages.contacts.h1') }}
+                                    Контакты
                                 </div>
                                 <div class="contacts-content__label">
-                                    АО «РАВЕНСТВО-СЕРВИС»
+                                    АО «Саратовский Радиоприборный завод»
                                 </div>
                             </div>
                             <div class="contacts-content__info">
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.address') }}:
+                                        <img src="img/icons/social/map.svg" width="32" alt="Image"
+                                            class="info-contact__icon">
+                                        Адрес:
                                     </div>
                                     <div class="info-contact__value">
-                                        Россия, 198099, Санкт-Петербург, <br />
-                                        ул. Промышленная, д.&nbsp;19
+                                        Россия, 410040 Саратов, <br> просп. 50 лет Октября, 108
                                     </div>
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.phone') }}:
+                                        <img src="img/icons/social/phone.svg" width="32" alt="Image"
+                                            class="info-contact__icon">
+                                        Телефон:
                                     </div>
                                     <div class="info-contact__value">
-                                        <p>+7 812 252-92-00</p>
-                                        <p>+7 812 252-92-26</p>
+                                        <p>+7 8452 79-95-05</p>
+                                        <p>+7 8452 79-71-80</p>
                                     </div>
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.email') }}:
+                                        <img src="img/icons/social/envelope.svg" width="32" alt="Image"
+                                            class="info-contact__icon">
+                                        Электронный адрес:
                                     </div>
                                     <div class="info-contact__value">
-                                        rs@rawenstvo.ru
-                                    </div>
-                                </div>
-                                <!--                                <div class="info-contact">-->
-                                <!--                                    <div class="info-contact__label">-->
-                                <!--                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"-->
-                                <!--                                             class="info-contact__icon">-->
-                                <!--                                        {{ __('pages.contacts.site') }}:-->
-                                <!--                                    </div>-->
-                                <!--                                    <div class="info-contact__value">-->
-                                <!--                                        https://www.rawenstvo.ru/-->
-                                <!--                                    </div>-->
-                                <!--                                </div>-->
-                            </div>
-                        </div>
-                        <div class="contacts-wrapper__logo">
-                            <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="4"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/04.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="2"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/02.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="3"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/03.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="1"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/01.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="6"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/06.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="7"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/07.jpg" alt="Image" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="logo-contact" hidden="hidden" data-submenu="5">
-                    <div class="logo-contact__block">
-                        <div class="contacts-content">
-                            <div class="contacts-content__header">
-                                <div class="contacts-content__title">
-                                    {{ __('pages.contacts.h1') }}
-                                </div>
-                                <div class="contacts-content__label">
-                                    АО «РАВЕНСТВО»
-                                </div>
-                            </div>
-                            <div class="contacts-content__info">
-                                <div class="info-contact">
-                                    <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.address') }}:
-                                    </div>
-                                    <div class="info-contact__value">
-                                        Россия, 198099, Санкт-Петербург,
-                                        ул.&nbsp;Промышленная, д.&nbsp;19
+                                        srz@granit-srz.ru
                                     </div>
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.phone') }}:
+                                        <img src="img/icons/social/browser.svg" width="32" alt="Image"
+                                            class="info-contact__icon">
+                                        Корпоративный сайт:
                                     </div>
                                     <div class="info-contact__value">
-                                        <p>+7 812 252-93-10</p>
-                                        <p>+7 812 252-93-33</p>
-                                    </div>
-                                </div>
-                                <div class="info-contact">
-                                    <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.email') }}:
-                                    </div>
-                                    <div class="info-contact__value">
-                                        rawenstvo@rawenstvo.ru
-                                    </div>
-                                </div>
-                                <div class="info-contact">
-                                    <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/browser.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
-                                        {{ __('pages.contacts.site') }}:
-                                    </div>
-                                    <div class="info-contact__value">
-                                        https://www.rawenstvo.ru/
+                                        https://www.granit-srz.ru/
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="contacts-wrapper__logo">
                             <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="2"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/02.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="3"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/03.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="4"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_main" data-parent="4"
+                                    type="button">
                                     <img src="/img/brands/04.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="1"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_01" data-parent="2"
+                                    type="button">
+                                    <img src="/img/brands/02.jpg" alt="Image" />
+                                </button>
+                                <button class="contacts-logo-item contacts-logo-item_02" data-parent="3"
+                                    type="button">
+                                    <img src="/img/brands/03.jpg" alt="Image" />
+                                </button>
+                                <button class="contacts-logo-item contacts-logo-item_3" data-parent="1"
+                                    type="button">
                                     <img src="/img/brands/01.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="6"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_5" data-parent="6"
+                                    type="button">
                                     <img src="/img/brands/06.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="7"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_6" data-parent="7"
+                                    type="button">
                                     <img src="/img/brands/07.jpg" alt="Image" />
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="logo-contact" hidden="hidden" data-submenu="6">
                     <div class="logo-contact__block">
                         <div class="contacts-content">
@@ -657,28 +363,20 @@ import { Link } from "@inertiajs/vue3";
                             <div class="contacts-content__info">
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/map.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
                                         Россия, 412541, Саратовская область,
-                                        <br/>
+                                        <br />
                                         г.&nbsp;Петровск, ул.&nbsp;Гоголя, д.&nbsp;40
                                     </div>
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/phone.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -688,12 +386,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/envelope.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -714,53 +408,28 @@ import { Link } from "@inertiajs/vue3";
                         </div>
                         <div class="contacts-wrapper__logo">
                             <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="6"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_main" data-parent="6"
+                                    type="button">
                                     <img src="/img/brands/06.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="2"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_01" data-parent="2"
+                                    type="button">
                                     <img src="/img/brands/02.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="3"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_02" data-parent="3"
+                                    type="button">
                                     <img src="/img/brands/03.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="4"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_3" data-parent="4"
+                                    type="button">
                                     <img src="/img/brands/04.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="1"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_5" data-parent="1"
+                                    type="button">
                                     <img src="/img/brands/01.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="7"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_6" data-parent="7"
+                                    type="button">
                                     <img src="/img/brands/07.jpg" alt="Image" />
                                 </button>
                             </div>
@@ -781,12 +450,8 @@ import { Link } from "@inertiajs/vue3";
                             <div class="contacts-content__info">
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/map.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/map.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.address') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -796,12 +461,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/phone.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/phone.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -811,12 +472,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/envelope.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/envelope.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.email') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -825,12 +482,8 @@ import { Link } from "@inertiajs/vue3";
                                 </div>
                                 <div class="info-contact">
                                     <div class="info-contact__label">
-                                        <img
-                                            src="/img/icons/social/browser.svg"
-                                            width="32"
-                                            alt="Image"
-                                            class="info-contact__icon"
-                                        />
+                                        <img src="/img/icons/social/browser.svg" width="32" alt="Image"
+                                            class="info-contact__icon" />
                                         {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
@@ -841,53 +494,28 @@ import { Link } from "@inertiajs/vue3";
                         </div>
                         <div class="contacts-wrapper__logo">
                             <div class="contacts-logo">
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_main"
-                                    data-parent="7"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_main" data-parent="7"
+                                    type="button">
                                     <img src="/img/brands/07.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_01"
-                                    data-parent="2"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_01" data-parent="2"
+                                    type="button">
                                     <img src="/img/brands/02.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_02"
-                                    data-parent="3"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_02" data-parent="3"
+                                    type="button">
                                     <img src="/img/brands/03.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_3"
-                                    data-parent="4"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_3" data-parent="4"
+                                    type="button">
                                     <img src="/img/brands/04.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_4"
-                                    data-parent="5"
-                                    type="button"
-                                >
-                                    <img src="/img/brands/05.jpg" alt="Image" />
-                                </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_5"
-                                    data-parent="6"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_5" data-parent="6"
+                                    type="button">
                                     <img src="/img/brands/06.jpg" alt="Image" />
                                 </button>
-                                <button
-                                    class="contacts-logo-item contacts-logo-item_6"
-                                    data-parent="1"
-                                    type="button"
-                                >
+                                <button class="contacts-logo-item contacts-logo-item_6" data-parent="1"
+                                    type="button">
                                     <img src="/img/brands/01.jpg" alt="Image" />
                                 </button>
                             </div>
