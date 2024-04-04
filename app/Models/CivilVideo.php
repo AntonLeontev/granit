@@ -17,7 +17,7 @@ class CivilVideo extends Model
         'title_en',
     ];
 
-    public function product(): BelongsTo
+    public function civilProduct(): BelongsTo
     {
         return $this->belongsTo(CivilProduct::class);
     }

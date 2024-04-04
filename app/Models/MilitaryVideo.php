@@ -17,7 +17,7 @@ class MilitaryVideo extends Model
         'title_en',
     ];
 
-    public function product(): BelongsTo
+    public function militaryProduct(): BelongsTo
     {
         return $this->belongsTo(MilitaryProduct::class);
     }

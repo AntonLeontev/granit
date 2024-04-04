@@ -51,7 +51,7 @@ class CivilVideoResource extends ModelResource
         return [
             'title_ru' => ['nullable', 'string', 'max:255'],
             'title_en' => ['nullable', 'string', 'max:255'],
-            'path' => ['required', 'file', 'mimetypes:video/mp4'],
+            'path' => ['file', 'mimetypes:video/mp4', 'nullable'],
             'civil_product_id' => ['required', 'exists:civil_products,id'],
         ];
     }
@@ -73,6 +73,6 @@ class CivilVideoResource extends ModelResource
 
     protected function getParentRelationName(): string
     {
-        return 'product';
+        return 'civilProduct';
     }
 }

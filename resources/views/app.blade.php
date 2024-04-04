@@ -11,6 +11,12 @@
 
 <body>
     @inertia
+
+	<script>
+		document.onselectstart = () => false;
+		document.ondblclick = () => false;
+		document.oncontextmenu = () => false;
+	</script>
 </body>
 
 </html>
