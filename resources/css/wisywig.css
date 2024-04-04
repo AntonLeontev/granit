@@ -34,15 +34,13 @@
 
 .product__content table {
 	margin-bottom: 25px;
-}
-
-.product__content tr {
-	border-bottom: 2px #fff solid;
+	border-collapse: collapse
 }
 
 .product__content td {
 	padding-bottom: 10px;
 	padding-top: 16px;
+	border-bottom: 2px #fff solid;
 }
 
 .product__content table ul {
