@@ -275,24 +275,6 @@ body {
      object-fit: contain;
 }
 
-.video-list {
-  list-style-type: none;
-  counter-reset: item;
-}
-
-.video-list li {
-  padding-left: 1.875rem;
-  position: relative;
-}
-
-.video-list li:before {
-  counter-increment: item;
-  content: counter(item) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .stretched-link::after {
   position: absolute;
   top: 0;
@@ -566,7 +548,9 @@ body {
   overflow: hidden auto;
   display: -ms-grid;
   display: grid;
-  height: 37.5rem;
+	-ms-flex-line-pack: start;
+	align-content: start;
+  height: 47.5rem;
   -ms-grid-columns: (13.75rem);
   grid-template-columns: repeat(6, 13.75rem);
   gap: 4.375rem;
@@ -636,7 +620,7 @@ body {
 }
 
 .product__content {
-  height: 48.75rem;
+  height: 51.125rem;
   overflow: hidden auto;
   scrollbar-width: thin;
   scrollbar-color: #224042 #006D78;
@@ -691,8 +675,8 @@ body {
 
 .video {
   border-radius: 0.3125rem;
-  width: 39.375rem;
-  height: 15.375rem;
+  width: 100%;
+  height: auto;
   margin-left: -1.875rem;
 }
 
