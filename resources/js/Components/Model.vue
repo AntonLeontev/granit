@@ -13,23 +13,21 @@ onMounted(() => {
 	if (props.path === null) return;
 	if (props.path === '') return;
 
-	const { sizes, camera, scene, canvas, controls, renderer } = init();
+	const { sizes, camera, scene, canvas, controls, renderer, container } = init();
 
 	camera.position.z = 3;
 
 	const loader = new GLTFLoader();
-	let model;
-	console.log(props.path);
 	loader.load(
 	    "/storage/" + props.path,
 	    function (gltf) {
-	        scaleToFit(gltf.scene, new THREE.Vector3(4, 3, 4.5));
+	        scaleToFit(gltf.scene, new THREE.Vector3(3.1, 3, 4.5));
 
-	        model = gltf.scene;
-	        console.log("Модель загружена");
-	        let b = new THREE.Box3().setFromObject(gltf.scene);
-	        // gltf.scene.position.sub(b.getCenter()); // центрируем
-	        // gltf.scene.children[0].scale.set(2, 2, 2);
+			let box = new THREE.Box3().setFromObject( gltf.scene );
+			let center = new THREE.Vector3();
+			box.getCenter(center);
+			gltf.scene.position.sub(center);
+
 	        scene.add(gltf.scene);
 	    },
 	    undefined,
@@ -48,8 +46,8 @@ onMounted(() => {
 	/** Базовые обпаботчики событий длы поддержки ресайза */
 	window.addEventListener("resize", () => {
 		// Обновляем размеры
-		sizes.width = window.innerWidth;
-		sizes.height = window.innerHeight;
+		sizes.width = container.getBoundingClientRect().width;
+		sizes.height = container.getBoundingClientRect().height;
 
 		// Обновляем соотношение сторон камеры
 		camera.aspect = sizes.width / sizes.height;
@@ -60,14 +58,6 @@ onMounted(() => {
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 		renderer.render(scene, camera);
 	});
-
-	// window.addEventListener("dblclick", () => {
-	// 	if (!document.fullscreenElement) {
-	// 		canvas.requestFullscreen();
-	// 	} else {
-	// 		document.exitFullscreen();
-	// 	}
-	// });
 })
 
 

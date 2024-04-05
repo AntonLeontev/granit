@@ -19,8 +19,9 @@ const init = () => {
     const controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
     controls.enableZoom = false;
-    controls.autoRotate = true;
+    controls.autoRotate = false;
     controls.autoRotateSpeed = 4;
+    controls.enablePan = false;
 
     const renderer = new THREE.WebGLRenderer({ canvas });
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -33,7 +34,7 @@ const init = () => {
     renderer.setSize(sizes.width, sizes.height);
     renderer.render(scene, camera);
 
-    return { sizes, scene, canvas, camera, renderer, controls };
+    return { sizes, scene, canvas, camera, renderer, controls, container };
 };
 
 export default init;
