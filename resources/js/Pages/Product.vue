@@ -90,44 +90,20 @@ function scrollDown() {
                         <div data-tabs-body class="tabs__content">
                             <div
                                 class="tabs__body"
-                                v-if="activeTab === 'description'"
+                                
                             >
                                 <div class="product__title">
                                     {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div class="product__content" v-html="product['description_' + page.props.locale]" ref="description"></div>
-                            </div>
-                            <div
-                                class="tabs__body"
-                                v-if="activeTab === 'table'"
-                            >
-                                <div class="product__title">
-                                    {{ product['title_' + page.props.locale] }}
-                                </div>
-                                <div class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
-                            </div>
-                            <div
-                                class="tabs__body"
-                                v-if="activeTab === 'video'"
-                            >
-                                <div class="product__title">
-                                    {{ product['title_' + page.props.locale] }}
-                                </div>
-                                <div class="product__content" ref="video">
+                                <div v-if="activeTab === 'description'" class="product__content" v-html="product['description_' + page.props.locale]" ref="description"></div>
+								<div v-if="activeTab === 'table'" class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
+								<div v-if="activeTab === 'video'" class="product__content" ref="video">
                                     <ol class="video-list">
                                         <li v-for="video in product.videos">
                                             <div class="video-list__title">
                                                 {{ video['title_'+page.props.locale] }}
                                             </div>
                                             <video class="video" :src="'/storage/'+video.path" controls>
-                                                <!-- <source
-                                                    src="video.webm"
-                                                    type="video/webm"
-                                                />
-                                                <source
-                                                    src="video.mp4"
-                                                    type="video/mp4"
-                                                /> -->
                                             </video>
                                         </li>
                                     </ol>
