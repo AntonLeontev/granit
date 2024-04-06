@@ -14,7 +14,7 @@ import { Link } from "@inertiajs/vue3";
     <Layout>
         <div class="main">
 			<div class="main__video">
-				<video loop="loop" autoplay>
+				<video loop="loop" autoplay muted>
 					<source src="/img/video/video-bg.mp4" type="video/mp4">
 				</video>
 			</div>
