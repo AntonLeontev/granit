@@ -21,7 +21,7 @@ onMounted(() => {
 	loader.load(
 	    "/storage/" + props.path,
 	    function (gltf) {
-	        scaleToFit(gltf.scene, new THREE.Vector3(3.1, 3, 4.5));
+	        scaleToFit(gltf.scene, new THREE.Vector3(3, 3, 4.5));
 
 			let box = new THREE.Box3().setFromObject( gltf.scene );
 			let center = new THREE.Vector3();

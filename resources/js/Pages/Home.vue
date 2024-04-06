@@ -13,6 +13,11 @@ import { Link } from "@inertiajs/vue3";
 <template>
     <Layout>
         <div class="main">
+			<div class="main__video">
+				<video loop="loop" autoplay>
+					<source src="/img/video/video-bg.mp4" type="video/mp4">
+				</video>
+			</div>
             <Link :href="route('civil')" class="main__side main__left">
                 <div class="main__title">{{ __('pages.home.civil') }}</div>
             </Link>
