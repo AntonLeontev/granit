@@ -52,10 +52,10 @@ class MilitaryProductResource extends ModelResource
                     Text::make('Название RU', 'title_ru'),
                     Text::make('Название сокращенно RU', 'short_title_ru'),
                     TinyMce::make('Описание RU', 'description_ru')->nullable()->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript')
                         ->menubar(''),
                     TinyMce::make('Характеристики RU', 'characteristics_ru')->nullable()->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript')
                         ->menubar(''),
                 ])->columnSpan(6),
                 Column::make('Данные на английском', [
@@ -64,10 +64,10 @@ class MilitaryProductResource extends ModelResource
                     TinyMce::make('Описание EN', 'description_en')
                         ->nullable()
                         ->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript')
                         ->menubar(''),
                     TinyMce::make('Характеристики EN', 'characteristics_en')->nullable()->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright')
+                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript')
                         ->menubar(''),
                 ])->columnSpan(6),
             ]),
