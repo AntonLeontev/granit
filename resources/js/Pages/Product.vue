@@ -58,32 +58,6 @@ function scrollDown() {
                     </div>
 
 					<Model :path="product['3d_model']" />
-                    <!-- <div class="control-panel" >
-                        <button
-                            type="button"
-                            class="control-panel__item _reverse"
-                        >
-                            <img
-                                src="/img/icons/arrow-two_accent.svg"
-                                alt="Image"
-                            />
-                        </button>
-                        <button type="button" class="control-panel__item">
-                            <img
-                                src="/img/icons/arrow-two_accent.svg"
-                                alt="Image"
-                            />
-                        </button>
-                        <button type="button" class="control-panel__item">
-                            <img src="/img/icons/loop-plus.svg" alt="Image" />
-                        </button>
-                        <button type="button" class="control-panel__item">
-                            <img src="/img/icons/loop-minus.svg" alt="Image" />
-                        </button>
-                        <button type="button" class="control-panel__item">
-                            <img src="/img/icons/repeat.svg" alt="Image" />
-                        </button>
-                    </div> -->
                 </div>
                 <div class="product__parameters">
                     <div class="tabs" data-tabs="">
@@ -95,9 +69,9 @@ function scrollDown() {
                                 <div class="product__title">
                                     {{ product['title_' + page.props.locale] }}
                                 </div>
-                                <div v-if="activeTab === 'description'" class="product__content" v-html="product['description_' + page.props.locale]" ref="description"></div>
-								<div v-if="activeTab === 'table'" class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
-								<div v-if="activeTab === 'video'" class="product__content" ref="video">
+                                <div v-show="activeTab === 'description'" class="product__content" v-html="product['description_' + page.props.locale]" ref="description"></div>
+								<div v-show="activeTab === 'table'" class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
+								<div v-show="activeTab === 'video'" class="product__content" ref="video">
                                     <ol class="video-list">
                                         <li v-for="video in product.videos">
                                             <div class="video-list__title">

@@ -191,6 +191,12 @@ body {
   gap: 0.625rem;
 }
 
+.tabs__body {
+	display: flex;
+	flex-direction: column;
+	max-height: 894px;
+}
+
 .tabs__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,10 +258,6 @@ body {
   border-top: 0.0625rem solid #fff;
 }
 
-.tabs-actions__footer .tabs__title:last-child img {
-  rotate: 90deg;
-}
-
 .main__video video,
 .main__video iframe,
 .main__video object,
@@ -272,6 +274,10 @@ body {
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   background-size: cover;
+}
+
+.tabs-actions__footer .tabs__title:last-child img {
+  rotate: 90deg;
 }
 
 [class*=-ibg] {
@@ -565,8 +571,8 @@ body {
   overflow: hidden auto;
   display: -ms-grid;
   display: grid;
-  -ms-flex-line-pack: start;
-      align-content: start;
+	-ms-flex-line-pack: start;
+	align-content: start;
   height: 47.5rem;
   -ms-grid-columns: (13.75rem);
   grid-template-columns: repeat(6, 13.75rem);
@@ -608,7 +614,6 @@ body {
 }
 
 .product__inner {
-  overflow: hidden;
   height: 100%;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
@@ -616,27 +621,18 @@ body {
   border-radius: 0.3125rem;
   padding: 2.5rem 0 2.5rem 2.5rem;
   background-color: rgba(0, 109, 120, 0.6);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 47.5rem 1fr;
+  grid-template-columns: 47.5rem 1fr;
   gap: 2.5rem;
 }
 
 .product__model {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 47.5rem;
-          flex: 0 0 47.5rem;
   border: 0.0625rem solid var(--primary);
   border-radius: 0.3125rem;
   position: relative;
   overflow: hidden;
-  height: 100%;
-}
-
-.product__parameters {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 55rem;
-          flex: 0 0 55rem;
 }
 
 .product__title {
@@ -644,16 +640,10 @@ body {
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 2.5rem;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  height: auto;
 }
 
 .product__content {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
+  height: 51.125rem;
   overflow: hidden auto;
   scrollbar-width: thin;
   scrollbar-color: #224042 #006D78;
@@ -663,17 +653,6 @@ body {
 .product__img {
   height: 100%;
   padding-bottom: 100%;
-}
-
-.content-wrapper {
-  max-height: 56.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .control-panel {
