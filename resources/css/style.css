@@ -191,12 +191,6 @@ body {
   gap: 0.625rem;
 }
 
-.tabs__body {
-	display: flex;
-	flex-direction: column;
-	max-height: 894px;
-}
-
 .tabs__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,6 +252,10 @@ body {
   border-top: 0.0625rem solid #fff;
 }
 
+.tabs-actions__footer .tabs__title:last-child img {
+  rotate: 90deg;
+}
+
 .main__video video,
 .main__video iframe,
 .main__video object,
@@ -274,10 +272,6 @@ body {
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   background-size: cover;
-}
-
-.tabs-actions__footer .tabs__title:last-child img {
-  rotate: 90deg;
 }
 
 [class*=-ibg] {
@@ -571,8 +565,8 @@ body {
   overflow: hidden auto;
   display: -ms-grid;
   display: grid;
-	-ms-flex-line-pack: start;
-	align-content: start;
+  -ms-flex-line-pack: start;
+      align-content: start;
   height: 47.5rem;
   -ms-grid-columns: (13.75rem);
   grid-template-columns: repeat(6, 13.75rem);
@@ -614,6 +608,7 @@ body {
 }
 
 .product__inner {
+  overflow: hidden;
   height: 100%;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
@@ -621,18 +616,27 @@ body {
   border-radius: 0.3125rem;
   padding: 2.5rem 0 2.5rem 2.5rem;
   background-color: rgba(0, 109, 120, 0.6);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 47.5rem 1fr;
-  grid-template-columns: 47.5rem 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 2.5rem;
 }
 
 .product__model {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 47.5rem;
+          flex: 0 0 47.5rem;
   border: 0.0625rem solid var(--primary);
   border-radius: 0.3125rem;
   position: relative;
   overflow: hidden;
+  height: 100%;
+}
+
+.product__parameters {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 55rem;
+          flex: 0 0 55rem;
 }
 
 .product__title {
@@ -640,10 +644,16 @@ body {
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 2.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: auto;
 }
 
 .product__content {
-  height: 51.125rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   overflow: hidden auto;
   scrollbar-width: thin;
   scrollbar-color: #224042 #006D78;
@@ -653,6 +663,17 @@ body {
 .product__img {
   height: 100%;
   padding-bottom: 100%;
+}
+
+.content-wrapper {
+  max-height: 56.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .control-panel {
@@ -717,18 +738,19 @@ body {
           box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
   border: 0.125rem solid var(--primary);
   border-radius: 0.3125rem;
-  padding: 3.75rem 2.5rem;
+  padding: 2.5rem;
   background-color: rgba(0, 109, 120, 0.6);
 }
 
 .contacts-wrapper__logo {
   position: relative;
-  min-height: 43.75rem;
+  min-height: 45.375rem;
 }
 
 .logo-contact {
   -webkit-animation: move 0.6s ease-in-out alternate;
           animation: move 0.6s ease-in-out alternate;
+  height: 100%;
 }
 
 .logo-contact__block {
@@ -737,6 +759,7 @@ body {
   -ms-grid-columns: 1fr 58.5rem;
   grid-template-columns: 1fr 58.5rem;
   gap: 3.75rem;
+  height: calc(100% - 40px);
 }
 
 .logo-contact._submenu-open {
@@ -799,37 +822,52 @@ body {
   width: 12.1875rem;
   height: 12.1875rem;
   border-radius: 50%;
-  overflow: hidden;
   -webkit-box-shadow: 0 0 15px 0 #05373c;
           box-shadow: 0 0 15px 0 #05373c;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  gap: 1.25rem;
 }
 
 .contacts-logo-item img {
+  border-radius: 50%;
   pointer-events: none;
 }
 
+.contacts-logo-item span {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.75;
+  line-height: 130%;
+}
+
 .contacts-logo-item_main {
-  width: 24.375rem;
-  height: 24.375rem;
+  width: 21.6875rem;
+  height: 21.6875rem;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
 }
 
+.contacts-logo-item_main img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .contacts-logo-item_01 {
   top: 0;
-  left: 11.1111111111%;
+  left: 20.7264957265%;
 }
 
 .contacts-logo-item_02 {
-  top: 0;
-  right: 11.1111111111%;
+  top: 10%;
+  right: 10.111111%;
 }
 
 .contacts-logo-item_3 {
-  right: 0;
-  top: 50%;
-  translate: 0 -50%;
+  bottom: 10%;
+  right: 12.547009%;
 }
 
 .contacts-logo-item_4 {
@@ -838,12 +876,12 @@ body {
 }
 
 .contacts-logo-item_5 {
-  bottom: 0;
-  left: 11.1111111111%;
+  bottom: 2.0625rem;
+  left: 20.111111%;
 }
 
 .contacts-logo-item_6 {
-  left: 0;
+  left: 4%;
   top: 50%;
   translate: 0 -50%;
 }
