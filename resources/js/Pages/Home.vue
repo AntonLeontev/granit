@@ -7,7 +7,11 @@ export default {
 </script>
 
 <script setup>
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
+
+const page = usePage()
+
+console.log(page.props.locale);
 </script>
 
 <template>
@@ -33,7 +37,8 @@ import { Link } from "@inertiajs/vue3";
                     />
                 </div>
                 <div class="logo__item">
-                    <img src="img/logo.png" alt="Image" />
+                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+					<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                 </div>
                 <div class="logo-arrow logo__item">
                     <img

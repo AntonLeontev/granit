@@ -12,8 +12,14 @@ import { Link } from "@inertiajs/vue3";
 
 <template>
     <Layout>
-        <section class="hero" style="background-image: url(/img/civil-bg.jpg)">
-            <div class="hero__content">
+		<div class="" style="position: absolute; background: linear-gradient(90deg, rgba(6,46,50,1) 0%, rgba(101,195,200,0) 100%); width: 100%; height: 100%;"></div>
+        <section class="hero">
+			<div class="main__video">
+				<video loop="loop" autoplay muted>
+					<source src="/img/video/video_civil.mp4" type="video/mp4">
+				</video>
+			</div>
+            <div class="hero__content" style="position: relative;">
                 <h2 class="hero__title">
                     {{ __('pages.civil.title') }}
                 </h2>
