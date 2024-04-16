@@ -13,6 +13,8 @@ class CivilVideo extends Model
     protected $fillable = [
         'civil_product_id',
         'path',
+        'path_ru',
+        'path_en',
         'title_ru',
         'title_en',
     ];

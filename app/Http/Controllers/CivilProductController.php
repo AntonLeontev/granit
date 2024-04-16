@@ -18,8 +18,8 @@ class CivilProductController extends Controller
 
     public function show(CivilProduct $product)
     {
-        $product->load(['videos'])
-            ->loadCount(['videos']);
+        $product->load(['video'])
+            ->loadCount(['video']);
 
         return inertia('Product', [
             'product' => $product,

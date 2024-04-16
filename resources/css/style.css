@@ -704,6 +704,10 @@ body {
   margin-left: -1.875rem;
 }
 
+.video-list {
+	list-style: none;
+}
+
 .video-list li + li {
   margin-top: 2.5rem;
 }

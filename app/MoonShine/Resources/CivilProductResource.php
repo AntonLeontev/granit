@@ -12,7 +12,7 @@ use MoonShine\Fields\File;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
-use MoonShine\Fields\Relationships\HasMany;
+use MoonShine\Fields\Relationships\HasOne;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
@@ -26,7 +26,7 @@ class CivilProductResource extends ModelResource
 
     protected string $title = 'Гражданская продукция';
 
-    protected array $with = ['videos'];
+    protected array $with = ['video'];
 
     protected string $column = 'title_ru';
 
@@ -81,9 +81,8 @@ class CivilProductResource extends ModelResource
                 ->dir('civil/models')
                 ->hint('Модели должны быть с расширением glb или gltf'),
 
-            HasMany::make('Видео', 'videos', resource: new CivilVideoResource)
-                ->hideOnIndex()
-                ->creatable(),
+            HasOne::make('Видео', 'video', resource: new CivilVideoResource)
+                ->hideOnIndex(),
         ];
     }
 

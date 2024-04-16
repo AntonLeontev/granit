@@ -74,12 +74,12 @@ function scrollDown() {
 								<div v-show="activeTab === 'table'" class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
 								<div v-if="activeTab === 'video'" class="product__content" ref="video">
                                     <ol class="video-list">
-                                        <li v-for="video in product.videos">
+                                        <li>
                                             <div class="video-list__title">
-                                                {{ video['title_'+page.props.locale] }}
+                                                {{ product.video['title_'+page.props.locale] }}
                                             </div>
 											<div>
-												<Player :path="video.path" />
+												<Player :path="product.video['path_'+page.props.locale]" />
 											</div>
                                         </li>
                                     </ol>
@@ -130,7 +130,7 @@ function scrollDown() {
                                 <button
                                     type="button"
                                     class="tabs__title"
-									v-if="product.videos_count > 0"
+									v-if="product.video_count > 0"
                                     :class="{
                                         '_tab-active': activeTab === 'video',
                                     }"

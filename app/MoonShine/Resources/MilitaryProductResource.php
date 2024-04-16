@@ -13,7 +13,7 @@ use MoonShine\Fields\File;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
-use MoonShine\Fields\Relationships\HasMany;
+use MoonShine\Fields\Relationships\HasOne;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
@@ -27,7 +27,7 @@ class MilitaryProductResource extends ModelResource
 
     protected string $title = 'Военная продукция';
 
-    protected array $with = ['videos'];
+    protected array $with = ['video'];
 
     protected string $column = 'title_ru';
 
@@ -82,9 +82,8 @@ class MilitaryProductResource extends ModelResource
                 ->dir('military/models')
                 ->hint('Модели должны быть с расширением glb или gltf'),
 
-            HasMany::make('Видео', 'videos', resource: new MilitaryVideoResource)
-                ->hideOnIndex()
-                ->creatable(),
+            HasOne::make('Видео', 'video', resource: new MilitaryVideoResource)
+                ->hideOnIndex(),
         ];
     }
 

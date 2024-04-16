@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Traits\HasPosition;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class CivilProduct extends Model
 {
@@ -29,9 +29,9 @@ class CivilProduct extends Model
     protected $casts = [
     ];
 
-    public function videos(): HasMany
+    public function video(): HasOne
     {
-        return $this->hasMany(CivilVideo::class);
+        return $this->hasOne(CivilVideo::class);
     }
 
     protected static function booted(): void

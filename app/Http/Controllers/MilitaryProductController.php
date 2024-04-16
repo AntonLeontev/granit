@@ -18,8 +18,8 @@ class MilitaryProductController extends Controller
 
     public function show(MilitaryProduct $product)
     {
-        $product->load(['videos'])
-            ->loadCount(['videos']);
+        $product->load(['video'])
+            ->loadCount(['video']);
 
         return inertia('Product', [
             'product' => $product,
