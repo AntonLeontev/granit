@@ -37,8 +37,8 @@
                                         {{ __('pages.contacts.phone') }}:
                                     </div>
                                     <div class="info-contact__value">
-                                        <p>+7 812 271-74-94</p>
-                                        <p>+7 812 578-94-86</p>
+                                        <p>+7 812 271-45-85</p>
+                                        <p>+7 812 274 63 39</p>
                                     </div>
                                 </div>
                                 <div class="info-contact">
@@ -142,7 +142,7 @@
                                         {{ __('pages.contacts.site') }}:
                                     </div>
                                     <div class="info-contact__value">
-                                        https://www.granit-srz.ru/
+                                        https://www.zavodkulakova.ru
                                     </div>
                                 </div>
                             </div>
