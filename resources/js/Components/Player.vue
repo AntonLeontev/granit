@@ -16,6 +16,7 @@ onMounted(() => {
 		controls: true,
 		muted: true,
 		loop: true,
+		bigPlayButton: false,
 		controlBar: {
 			fullscreenToggle: false,
 			playToggle: false,
