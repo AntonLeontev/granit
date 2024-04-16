@@ -8,8 +8,9 @@ export default {
 
 <script setup>
 import { Link, usePage } from "@inertiajs/vue3";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Model from "/resources/js/Components/Model.vue"
+import Player from "/resources/js/Components/Player.vue"
 
 const page = usePage()
 
@@ -71,14 +72,15 @@ function scrollDown() {
                                 </div>
                                 <div v-show="activeTab === 'description'" class="product__content" v-html="product['description_' + page.props.locale]" ref="description"></div>
 								<div v-show="activeTab === 'table'" class="product__content" v-html="product['characteristics_' + page.props.locale]" ref="table"></div>
-								<div v-show="activeTab === 'video'" class="product__content" ref="video">
+								<div v-if="activeTab === 'video'" class="product__content" ref="video">
                                     <ol class="video-list">
                                         <li v-for="video in product.videos">
                                             <div class="video-list__title">
                                                 {{ video['title_'+page.props.locale] }}
                                             </div>
-                                            <video class="video" :src="'/storage/'+video.path" controls>
-                                            </video>
+											<div>
+												<Player :path="video.path" />
+											</div>
                                         </li>
                                     </ol>
                                 </div>
