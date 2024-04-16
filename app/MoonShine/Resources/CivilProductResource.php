@@ -51,10 +51,10 @@ class CivilProductResource extends ModelResource
                     Text::make('Название RU', 'title_ru'),
                     Text::make('Название сокращенно RU', 'short_title_ru'),
                     TinyMce::make('Описание RU', 'description_ru')->nullable()->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
+                        ->toolbar('undo redo | bold italic underline | fontsize lineheight | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
                         ->menubar(''),
                     TinyMce::make('Характеристики RU', 'characteristics_ru')->nullable()->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
+                        ->toolbar('undo redo | bold italic underline | fontsize lineheight | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
                         ->menubar(''),
                 ])->columnSpan(6),
                 Column::make('Данные на английском', [
@@ -63,10 +63,10 @@ class CivilProductResource extends ModelResource
                     TinyMce::make('Описание EN', 'description_en')
                         ->nullable()
                         ->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
+                        ->toolbar('undo redo | bold italic underline | fontsize lineheight | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
                         ->menubar(''),
                     TinyMce::make('Характеристики EN', 'characteristics_en')->nullable()->hideOnIndex()
-                        ->toolbar('undo redo | bold italic underline | fontsize | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
+                        ->toolbar('undo redo | bold italic underline | fontsize lineheight | bullist numlist | table | alignleft aligncenter alignright | subscript superscript | removeformat')
                         ->menubar(''),
                 ])->columnSpan(6),
             ]),

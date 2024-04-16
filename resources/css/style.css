@@ -575,8 +575,9 @@ body {
 	align-content: start;
   height: 47.5rem;
   -ms-grid-columns: (13.75rem);
-  grid-template-columns: repeat(6, 13.75rem);
-  gap: 4.375rem;
+  grid-template-columns: repeat(7, 13.75rem);
+  column-gap: 1.375rem;
+  row-gap: 3.375rem;
   scrollbar-width: thin;
   scrollbar-color: #224042 #006D78;
 }
@@ -602,7 +603,7 @@ body {
 
 .catalog-item__title {
   line-height: 110%;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 
