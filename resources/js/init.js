@@ -12,7 +12,7 @@ const init = () => {
     const scene = new THREE.Scene();
     const canvas = document.querySelector(".canvas");
     const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-    camera.position.set(1, 1, 1);
+    camera.position.set(1, 1, 3);
     camera.lookAt(0, 0, 0);
     scene.add(camera);
 

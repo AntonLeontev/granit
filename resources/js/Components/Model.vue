@@ -15,13 +15,11 @@ onMounted(() => {
 
 	const { sizes, camera, scene, canvas, controls, renderer, container } = init();
 
-	camera.position.z = 3;
-
 	const loader = new GLTFLoader();
 	loader.load(
 	    "/storage/" + props.path,
 	    function (gltf) {
-	        scaleToFit(gltf.scene, new THREE.Vector3(3.2, 4, 3.2));
+	        scaleToFit(gltf.scene, new THREE.Vector3(3.2, 3, 3.2));
 
 			let box = new THREE.Box3().setFromObject( gltf.scene );
 			let center = new THREE.Vector3();
