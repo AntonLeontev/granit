@@ -1,8 +1,8 @@
 <script setup>
     import AppLayout from "../Layouts/AppLayout.vue";
-    import {
-        Link
-    } from "@inertiajs/vue3";
+  	import { Link, usePage } from "@inertiajs/vue3";
+
+	const page = usePage()
 </script>
 
 <template>
@@ -67,7 +67,8 @@
                             <div class="contacts-logo">
                                 <button class="contacts-logo-item contacts-logo-item_main" data-parent="1"
                                     type="button">
-                                    <img src="img/brands/01.jpg" alt="Image">
+                                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+									<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_01" data-parent="2" type="button">
                                     <img src="img/brands/02.jpg" alt="Image">
@@ -155,7 +156,8 @@
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_01" data-parent="1"
                                     type="button">
-                                    <img src="img/brands/01.jpg" alt="Image">
+                                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+									<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                                     <span v-html="__('pages.contacts.org.2.logo1')"></span>
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_02" data-parent="3"
@@ -253,7 +255,8 @@
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_02" data-parent="1"
                                     type="button">
-                                    <img src="img/brands/01.jpg" alt="Image">
+                                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+									<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                                     <span v-html="__('pages.contacts.org.3.logo2')"></span>
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_3" data-parent="4"
@@ -351,7 +354,8 @@
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_3" data-parent="1"
                                     type="button">
-                                    <img src="img/brands/01.jpg" alt="Image">
+                                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+									<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                                     <span v-html="__('pages.contacts.org.4.logo3')"></span>
                                 </button>
                                 <!--                                <button class="contacts-logo-item contacts-logo-item_4" data-parent="5" type="button">-->
@@ -442,7 +446,8 @@
                                 <!--                                </button>-->
                                 <button class="contacts-logo-item contacts-logo-item_5" data-parent="1"
                                     type="button">
-                                    <img src="img/brands/01.jpg" alt="Image">
+                                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+									<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                                     <span v-html="__('pages.contacts.org.5.logo4')"></span>
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_6" data-parent="7"
@@ -540,7 +545,8 @@
                                 </button>
                                 <button class="contacts-logo-item contacts-logo-item_6" data-parent="1"
                                     type="button">
-                                    <img src="img/brands/01.jpg" alt="Image">
+                                    <img v-if="page.props.locale === 'ru'" src="img/logo_ru.svg" alt="Image" /> 
+									<img v-if="page.props.locale === 'en'" src="img/logo_en.svg" alt="Image" />
                                     <span v-html="__('pages.contacts.org.6.logo5')"></span>
                                 </button>
                             </div>
