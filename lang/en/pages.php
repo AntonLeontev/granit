@@ -7,14 +7,14 @@ return [
     ],
     'civil' => [
         'title' => 'Civil products',
-        'text' => 'Unique base technologies allow JSC «Concern «Granit-Electron» within integration with production enterprises develop civil and dual purpose products. This are ship, coastal and navigating radar systems for ships motion control, for environment monitoring, sea borders security, information systems for Arctic zone of Northern Sea Route.',
+        'text' => 'Unique base technologies allow JSC «Concern «Granit-Electron» within integration with production enterprises develop civil and dual purpose products. These are ship, coastal and navigating radar systems for ships motion control, for environment monitoring, sea borders security, information systems for Arctic zone of Northern Sea Route.',
         '1' => 'Product Catalog',
         '2' => 'Home',
     ],
     'civil_catalog' => [
         'h1' => 'Civil products',
-        'footer1' => 'JSC Concern Granit-Electron',
-        'footer2' => 'Trust experience!',
+        'footer1' => 'JSC «Concern «Granit Electron»',
+        'footer2' => 'Trust the experience!',
     ],
     'military' => [
         'title' => 'Military products',
@@ -24,8 +24,8 @@ return [
     ],
     'military_catalog' => [
         'h1' => 'Military products',
-        'footer1' => 'JSC Concern «Granit-Electron»',
-        'footer2' => 'Trust experience!',
+        'footer1' => 'JSC «Concern «Granit Electron»',
+        'footer2' => 'Trust the experience!',
     ],
     'contacts' => [
         'h1' => 'Contacts',
