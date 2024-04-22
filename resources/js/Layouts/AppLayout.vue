@@ -18,6 +18,8 @@ function changeLang() {
 	})
 }
 
+document.addEventListener('touchmove', e => e.preventDefault());
+
 </script>
 
 <template>
