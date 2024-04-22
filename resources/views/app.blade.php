@@ -17,7 +17,16 @@
 		document.onselectstart = () => false;
 		document.ondblclick = () => false;
 		document.oncontextmenu = () => false;
-		document.addEventListener('touchmove', e => e.preventDefault());
+		document.addEventListener('touchmove', e => {
+			if (e.touches.length > 1) {
+				e.preventDefault()
+			}
+		}, {passive: false});
+		document.addEventListener("wheel", function(e) {
+			if (e.ctrlKey) {
+				e.preventDefault();
+			}
+		}, {passive: false});
 	</script>
 </body>
 
