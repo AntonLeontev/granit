@@ -18,28 +18,10 @@ function changeLang() {
 	})
 }
 
-document.addEventListener('touchmove', e => e.preventDefault());
-
 </script>
 
 <template>
-    <!DOCTYPE html>
-    <html :lang="page.props.locale">
-        <head>
-            <title>Гранит-Электрон</title>
-            <meta charset="UTF-8" />
-            <meta name="format-detection" content="telephone=no" />
-            <!-- <style>body{opacity: 0;}</style> -->
-            <link rel="shortcut icon" href="/favicon.ico" />
-            <!-- <meta name="robots" content="noindex, nofollow"> -->
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0, user-scalable=no"
-            />
-        </head>
-
-        <body>
-            <div class="wrapper">
+    <div class="wrapper">
                 <header class="header">
                     <div class="header__container">
                         <div class="header__menu menu">
@@ -146,6 +128,4 @@ document.addEventListener('touchmove', e => e.preventDefault());
                     <div class="footer__container"></div>
                 </footer>
             </div>
-        </body>
-    </html>
 </template>
