@@ -13,7 +13,7 @@ return [
     ],
     'civil_catalog' => [
         'h1' => 'Civil products',
-        'footer1' => 'JSC «Concern «Granit Electron»',
+        'footer1' => 'JSC «Concern «Granit-Electron»',
         'footer2' => 'Trust the experience!',
     ],
     'military' => [
@@ -24,7 +24,7 @@ return [
     ],
     'military_catalog' => [
         'h1' => 'Military products',
-        'footer1' => 'JSC «Concern «Granit Electron»',
+        'footer1' => 'JSC «Concern «Granit-Electron»',
         'footer2' => 'Trust the experience!',
     ],
     'contacts' => [
