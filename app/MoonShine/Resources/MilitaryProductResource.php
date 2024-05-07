@@ -80,7 +80,8 @@ class MilitaryProductResource extends ModelResource
                 ->removable()
                 ->keepOriginalFileName()
                 ->dir('military/models')
-                ->hint('Модели должны быть с расширением glb или gltf'),
+                ->hint('Модели должны быть с расширением glb или gltf')
+                ->hideOnIndex(),
 
             HasOne::make('Видео', 'video', resource: new MilitaryVideoResource)
                 ->hideOnIndex(),

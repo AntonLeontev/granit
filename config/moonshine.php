@@ -13,8 +13,8 @@ return [
     'namespace' => 'App\MoonShine',
 
     'title' => env('MOONSHINE_TITLE', 'АО «Концерн «Гранит-Электрон»'),
-    'logo' => '/img/logo.png',
-    'logo_small' => '/img/logo.png',
+    'logo' => '/img/logo_ru.png',
+    'logo_small' => '/img/logo_ru.png',
 
     'route' => [
         'domain' => env('MOONSHINE_URL', ''),

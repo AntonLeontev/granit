@@ -79,7 +79,8 @@ class CivilProductResource extends ModelResource
                 ->removable()
                 ->keepOriginalFileName()
                 ->dir('civil/models')
-                ->hint('Модели должны быть с расширением glb или gltf'),
+                ->hint('Модели должны быть с расширением glb или gltf')
+                ->hideOnIndex(),
 
             HasOne::make('Видео', 'video', resource: new CivilVideoResource)
                 ->hideOnIndex(),
