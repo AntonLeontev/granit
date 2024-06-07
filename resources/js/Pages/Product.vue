@@ -88,7 +88,7 @@ function scrollDown() {
                         </div>
                         <div class="tabs-actions">
                             <div class="tabs-actions__header">
-                                <Link
+                                <a
                                     :href="route(routeName)"
                                     class="tabs__title"
                                 >
@@ -96,7 +96,7 @@ function scrollDown() {
                                         src="/img/icons/close.svg"
                                         alt="Image"
                                     />
-                                </Link>
+                                </a>
                             </div>
                             <nav data-tabs-titles class="tabs__navigation">
                                 <button

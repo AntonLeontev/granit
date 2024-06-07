@@ -33,7 +33,7 @@ function changeLang() {
                                             _active: $page.component === 'Home',
                                         }"
                                     >
-                                        <Link
+                                        <a
                                             :href="route('home')"
                                             class="menu__link"
                                         >
@@ -42,7 +42,7 @@ function changeLang() {
                                                 width="50"
                                                 alt="Image"
                                             />
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li
                                         class="menu__item"
