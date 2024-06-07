@@ -9,7 +9,7 @@ const props = defineProps({
     path: String,
 });
 
-let listener;
+let resizeHandler;
 
 onMounted(() => {
 	if (props.path === null) return;
@@ -43,8 +43,7 @@ onMounted(() => {
 	};
 	tick();
 
-	/** Базовые обпаботчики событий длы поддержки ресайза */
-	listener = window.addEventListener("resize", () => {
+	resizeHandler = () => {
 		// Обновляем размеры
 		sizes.width = container.getBoundingClientRect().width;
 		sizes.height = container.getBoundingClientRect().height;
@@ -57,11 +56,16 @@ onMounted(() => {
 		renderer.setSize(sizes.width, sizes.height);
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 		renderer.render(scene, camera);
-	});
+	}
+
+	/** Базовые обпаботчики событий длы поддержки ресайза */
+	window.addEventListener("resize", resizeHandler);
 })
 
 onBeforeUnmount(() => {
-	window.removeEventListener("resize", listener);
+	if (resizeHandler) {
+		window.removeEventListener("resize", resizeHandler);
+	}
 })
 
 
