@@ -11,12 +11,16 @@ const props = defineProps({
 
 let resizeHandler;
 let shouldTick = true;
+let mainScene;
+let mainCanvas;
 
 onMounted(() => {
 	if (props.path === null) return;
 	if (props.path === '') return;
 
 	const { sizes, camera, scene, canvas, controls, renderer, container } = init();
+	mainScene = scene;
+	mainCanvas = canvas;
 
 	let loader = new GLTFLoader();
 	loader.load(
@@ -62,7 +66,7 @@ onMounted(() => {
 		renderer.setSize(sizes.width, sizes.height);
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 		renderer.render(scene, camera);
-	}
+	};
 
 	/** Базовые обпаботчики событий длы поддержки ресайза */
 	window.addEventListener("resize", resizeHandler);
@@ -71,7 +75,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	if (resizeHandler) {
 		window.removeEventListener("resize", resizeHandler);
-		shouldTick = false
+		shouldTick = false;
+		mainScene.clear();
 	}
 })
 
