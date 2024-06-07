@@ -16,6 +16,7 @@ import { Link } from "@inertiajs/vue3";
         <section class="hero">
 			<div class="main__video">
 				<video loop="loop" autoplay muted>
+					<source src="/img/video/video_military.webm" type="video/webm">
 					<source src="/img/video/video_military.mp4" type="video/mp4">
 				</video>
 			</div>
