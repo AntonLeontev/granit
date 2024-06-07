@@ -1,7 +1,7 @@
 <script setup>
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { onMounted } from "vue";
+import { onMounted, onBeforeUnmount } from "vue";
 
 import init from "/resources/js/init.js";
 
@@ -9,13 +9,15 @@ const props = defineProps({
     path: String,
 });
 
+let listener;
+
 onMounted(() => {
 	if (props.path === null) return;
 	if (props.path === '') return;
 
 	const { sizes, camera, scene, canvas, controls, renderer, container } = init();
 
-	const loader = new GLTFLoader();
+	let loader = new GLTFLoader();
 	loader.load(
 	    "/storage/" + props.path,
 	    function (gltf) {
@@ -42,7 +44,7 @@ onMounted(() => {
 	tick();
 
 	/** Базовые обпаботчики событий длы поддержки ресайза */
-	window.addEventListener("resize", () => {
+	listener = window.addEventListener("resize", () => {
 		// Обновляем размеры
 		sizes.width = container.getBoundingClientRect().width;
 		sizes.height = container.getBoundingClientRect().height;
@@ -56,6 +58,10 @@ onMounted(() => {
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 		renderer.render(scene, camera);
 	});
+})
+
+onBeforeUnmount(() => {
+	window.removeEventListener("resize", listener);
 })
 
 
