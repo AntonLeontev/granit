@@ -51,7 +51,7 @@ function changeLang() {
                                                 $page.url.startsWith('/civil'),
                                         }"
                                     >
-                                        <Link
+                                        <a
                                             :href="route('catalog.civil')"
                                             class="menu__link"
                                         >
@@ -60,7 +60,7 @@ function changeLang() {
                                                 width="50"
                                                 alt="Image"
                                             />
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li
                                         class="menu__item"
@@ -71,7 +71,7 @@ function changeLang() {
                                                 ),
                                         }"
                                     >
-                                        <Link
+                                        <a
                                             :href="route('catalog.military')"
                                             class="menu__link"
                                         >
@@ -80,7 +80,7 @@ function changeLang() {
                                                 width="50"
                                                 alt="Image"
                                             />
-                                        </Link>
+                                        </a>
                                     </li>
                                     <li
                                         class="menu__item"
