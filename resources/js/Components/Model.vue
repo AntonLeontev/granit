@@ -10,6 +10,7 @@ const props = defineProps({
 });
 
 let resizeHandler;
+let shouldTick = true;
 
 onMounted(() => {
 	if (props.path === null) return;
@@ -39,7 +40,12 @@ onMounted(() => {
 	const tick = () => {
 		controls.update();
 		renderer.render(scene, camera);
-		window.requestAnimationFrame(tick);
+
+		if (!shouldTick) return
+
+		setTimeout(() => {
+			window.requestAnimationFrame(tick);
+		}, 0);
 	};
 	tick();
 
@@ -65,6 +71,7 @@ onMounted(() => {
 onBeforeUnmount(() => {
 	if (resizeHandler) {
 		window.removeEventListener("resize", resizeHandler);
+		shouldTick = false
 	}
 })
 
