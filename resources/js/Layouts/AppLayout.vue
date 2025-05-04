@@ -6,7 +6,7 @@ import { router } from '@inertiajs/vue3'
 const page = usePage()
 
 if (sessionStorage.getItem('military_enabled') === null && page.component !== 'Question') {
-	location.href = '/question'
+	location.href = '/init'
 }
 
 const withMilitary = sessionStorage.getItem('military_enabled') === 'true';
