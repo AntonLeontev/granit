@@ -14,6 +14,7 @@ use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
 use MoonShine\Fields\Relationships\HasOne;
+use MoonShine\Fields\Switcher;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
@@ -46,6 +47,10 @@ class MilitaryProductResource extends ModelResource
             Number::make('Позиция в каталоге', 'position')
                 ->hideOnIndex()
                 ->default((MilitaryProduct::max('position') ?? 0) + 1),
+
+            Switcher::make('Показывать', 'is_enabled')
+                ->hideOnForm()
+                ->updateOnPreview(),
 
             Grid::make([
                 Column::make('Данные на русском', [
