@@ -465,6 +465,10 @@ body {
   top: 0;
 }
 
+.main__full {
+	padding-left: 6.25rem;
+}
+
 .main__left {
   left: 3.125rem;
   padding-left: 6.25rem;

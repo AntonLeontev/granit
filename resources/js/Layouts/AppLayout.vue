@@ -5,6 +5,12 @@ import { router } from '@inertiajs/vue3'
 
 const page = usePage()
 
+if (sessionStorage.getItem('military_enabled') === null && page.component !== 'Question') {
+	location.href = '/question'
+}
+
+const withMilitary = sessionStorage.getItem('military_enabled') === 'true';
+
 function changeLang() {
 	if (page.props.locale === 'ru') {
 		page.props.locale = 'en'
@@ -64,6 +70,7 @@ function changeLang() {
                                     </li>
                                     <li
                                         class="menu__item"
+										v-if="withMilitary"
                                         :class="{
                                             _active:
                                                 $page.url.startsWith(

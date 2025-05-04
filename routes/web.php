@@ -19,6 +19,7 @@ Route::inertia('/', 'Home')->name('home');
 Route::inertia('/military', 'Military')->name('military');
 Route::inertia('/civil', 'Civil')->name('civil');
 Route::inertia('/contacts', 'Contacts')->name('contacts');
+Route::inertia('/init', 'Question')->name('question');
 
 Route::get('military/catalog', [MilitaryProductController::class, 'index'])->name('catalog.military');
 Route::get('military/catalog/products/{product}', [MilitaryProductController::class, 'show'])

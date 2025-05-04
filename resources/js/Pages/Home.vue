@@ -11,6 +11,8 @@ import { Link, usePage } from "@inertiajs/vue3";
 
 const page = usePage()
 
+const withMilitary = sessionStorage.getItem('military_enabled') === 'true';
+
 </script>
 
 <template>
@@ -22,10 +24,13 @@ const page = usePage()
 					<source src="/img/video/video-bg.mp4" type="video/mp4">
 				</video>
 			</div>
-            <Link :href="route('civil')" class="main__side main__left">
+            <Link :href="route('civil')" class="main__side main__full" v-if="!withMilitary">
                 <div class="main__title">{{ __('pages.home.civil') }}</div>
             </Link>
-            <Link :href="route('military')" class="main__side main__right">
+            <Link :href="route('civil')" class="main__side main__left" v-if="withMilitary">
+                <div class="main__title">{{ __('pages.home.civil') }}</div>
+            </Link>
+            <Link :href="route('military')" class="main__side main__right" v-if="withMilitary">
                 <div class="main__title">{{ __('pages.home.military') }}</div>
             </Link>
             <div class="logo">
