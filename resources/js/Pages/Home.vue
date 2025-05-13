@@ -37,7 +37,7 @@ const withMilitary = sessionStorage.getItem('military_enabled') === 'true';
             <Link :href="route('military')" class="main__side main__right" v-if="withMilitary">
                 <div class="main__title">{{ __('pages.home.military') }}</div>
             </Link>
-            <div class="logo">
+            <div class="logo" v-if="withMilitary">
                 <div class="logo-arrow logo__item">
                     <img
                         src="img/icons/arrow-two.svg"
