@@ -48,8 +48,8 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             //        new MoonShineUserRoleResource()
             //    ),
             // ]),
-            MenuItem::make('Военная продукция', new MilitaryProductResource()),
-            MenuItem::make('Гражданская продукция', new CivilProductResource()),
+            MenuItem::make('Военная продукция', new MilitaryProductResource),
+            MenuItem::make('Гражданская продукция', new CivilProductResource),
 
         ];
     }
