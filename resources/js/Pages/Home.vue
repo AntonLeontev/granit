@@ -19,9 +19,13 @@ const withMilitary = sessionStorage.getItem('military_enabled') === 'true';
     <Layout>
         <div class="main">
 			<div class="main__video">
-				<video loop="loop" autoplay muted>
+				<video loop="loop" autoplay muted v-if="withMilitary">
 					<source src="/img/video/video-bg.webm" type="video/webm">
 					<source src="/img/video/video-bg.mp4" type="video/mp4">
+				</video>
+				<video loop="loop" autoplay muted v-if="!withMilitary">
+					<!-- <source src="/img/video/video-bg.webm" type="video/webm"> -->
+					<source src="/img/video/video_bg_civil.mp4" type="video/mp4">
 				</video>
 			</div>
             <Link :href="route('civil')" class="main__side main__full" v-if="!withMilitary">
